@@ -92,7 +92,7 @@ component Actions
 	port (
 		clock : in std_logic;
 		control_state : in control_state_type;
-      instr_mode : in  instr_mode_type;
+      	instr_mode : in  instr_mode_type;
 		instruction : out word;
 		operation : in optype;
 		operand1 : out word;

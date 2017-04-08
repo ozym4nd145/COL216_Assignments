@@ -26,6 +26,7 @@ package MyTypes is
 	-- 01 -> MUL/MLA
 	-- 10 -> DT
 	-- 11 -> B / BL
+	type DP_subclass_type is (IMM,SFT_IMM,SFT_REG);
 	subtype instr_class_type is  std_logic_vector (1 downto 0);
 	type DT_subclass_type is (WORD,HWRD);
 --	type control_state_type is ();

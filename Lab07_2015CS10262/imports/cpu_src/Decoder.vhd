@@ -34,6 +34,7 @@ entity Decoder is
     Port ( instruction : in  word;
            instr_class : out  instr_class_type;
            DT_subclass: out DT_subclass_type;
+           DP_subclass: out DP_subclass_type;
            operation : out optype;
            undefined : out  STD_LOGIC;
            not_implemented : out  STD_LOGIC);
@@ -48,6 +49,15 @@ begin
       undefined <= '0';    
       case instruction (27 downto 26) is
         when "00" =>
+          if(instruction(25)='1') then
+            DP_subclass <= IMM;
+          else
+            if (instruction(4)='0') then
+              DP_subclass <= SFT_IMM;
+            elsif (instruction(7)='0') then
+              DP_subclass <= SFT_REG;
+            end if;
+          end if;
           instr_class <= "00";
           case instruction (24 downto 21) is 
             when "0000" =>

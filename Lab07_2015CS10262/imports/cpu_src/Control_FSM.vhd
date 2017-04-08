@@ -32,13 +32,13 @@ use work.MyTypes.all;
 
 entity Control_FSM is
     Port ( instr_class : in  instr_class_type;
-			  instr_mode : in instr_mode_type;
-			  DP_subclass : in DP_subclass_type;
-			  instr_24 : in std_logic;
-			  instr_20 : in std_logic;
-			  rst : in std_logic;
+		   instr_mode : in instr_mode_type;
+		   DP_subclass : in DP_subclass_type;
+           instr_24 : in std_logic;
+		   instr_20 : in std_logic;
+           rst : in std_logic;
            control_state_out : out  control_state_type;
-			  clock : in std_logic);
+		   clock : in std_logic);
 end Control_FSM;
 
 architecture Behavioral of Control_FSM is
