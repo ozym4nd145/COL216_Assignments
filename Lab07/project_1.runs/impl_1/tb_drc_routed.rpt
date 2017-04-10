@@ -1,0 +1,663 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
+| Date         : Sun Apr 09 00:34:18 2017
+| Host         : admin-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_drc
+-----------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+           Max violations: <unlimited>
+         Violations found: 85
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP myMUL/temp_result input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP myMUL/temp_result__0 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP myMUL/temp_result__1 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPOP-1#1 Warning
+Output pipelining  
+DSP myMUL/temp_result output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#2 Warning
+Output pipelining  
+DSP myMUL/temp_result__0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#3 Warning
+Output pipelining  
+DSP myMUL/temp_result__1 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net cpu_inst/Actor/O26[0] is a gated clock net sourced by a combinational pin cpu_inst/Actor/operation_reg[3]_i_2/O, cell cpu_inst/Actor/operation_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net cpu_inst/Actor/O27[0] is a gated clock net sourced by a combinational pin cpu_inst/Actor/instr_class_reg[1]_i_2/O, cell cpu_inst/Actor/instr_class_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net cpu_inst/Actor/O29 is a gated clock net sourced by a combinational pin cpu_inst/Actor/DT_subclass_reg_i_2/O, cell cpu_inst/Actor/DT_subclass_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net cpu_inst/Actor/O4[0] is a gated clock net sourced by a combinational pin cpu_inst/Actor/DP_subclass_reg[1]_i_2/O, cell cpu_inst/Actor/DP_subclass_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[0][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[0][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[0][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[14][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[14][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[14][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[15][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[15][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[15][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[1][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[1][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[1][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[2][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[2][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[2][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[3][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[3][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[3][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[4][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[4][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[4][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[6][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[6][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[6][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net cpu_inst/Actor/RF/n_22_rf_reg[7][31]_i_1 is a gated clock net sourced by a combinational pin cpu_inst/Actor/RF/rf_reg[7][31]_i_1/O, cell cpu_inst/Actor/RF/rf_reg[7][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net cpu_inst/Actor/n_11_n_10_226_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/Actor/n_10_226_BUFG_inst_i_1/O, cell cpu_inst/Actor/n_10_226_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net cpu_inst/Actor/n_13_n_12_229_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/Actor/n_12_229_BUFG_inst_i_1/O, cell cpu_inst/Actor/n_12_229_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net cpu_inst/Actor/n_15_n_14_228_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/Actor/n_14_228_BUFG_inst_i_1/O, cell cpu_inst/Actor/n_14_228_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net cpu_inst/Actor/n_17_n_16_230_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/Actor/n_16_230_BUFG_inst_i_1/O, cell cpu_inst/Actor/n_16_230_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net cpu_inst/Actor/n_19_n_18_225_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/Actor/n_18_225_BUFG_inst_i_1/O, cell cpu_inst/Actor/n_18_225_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net cpu_inst/Actor/n_21_n_20_233_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/Actor/n_20_233_BUFG_inst_i_1/O, cell cpu_inst/Actor/n_20_233_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net cpu_inst/Actor/n_9_n_8_227_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/Actor/n_8_227_BUFG_inst_i_1/O, cell cpu_inst/Actor/n_8_227_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net cpu_inst/myFSM/E[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/WEA_MEM_reg[3]_i_1/O, cell cpu_inst/myFSM/WEA_MEM_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I21[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/DIN_MEM_reg[31]_i_1/O, cell cpu_inst/myFSM/DIN_MEM_reg[31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I22[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/A_reg[31]_i_2/O, cell cpu_inst/myFSM/A_reg[31]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I24[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/g0_b0/O, cell cpu_inst/myFSM/g0_b0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I25[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/D_reg[31]_i_2/O, cell cpu_inst/myFSM/D_reg[31]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I27[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/O_reg[31]_i_2/O, cell cpu_inst/myFSM/O_reg[31]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I29[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/flags_sig_reg[3]_i_2/O, cell cpu_inst/myFSM/flags_sig_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I30[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/PC_reg[31]_i_1/O, cell cpu_inst/myFSM/PC_reg[31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I32[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/g0_b0__0/O, cell cpu_inst/myFSM/g0_b0__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I34[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/g0_b0__1/O, cell cpu_inst/myFSM/g0_b0__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I36[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/g0_b0__2/O, cell cpu_inst/myFSM/g0_b0__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net cpu_inst/myFSM/I37[0] is a gated clock net sourced by a combinational pin cpu_inst/myFSM/Res_reg[31]_i_2/O, cell cpu_inst/myFSM/Res_reg[31]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#33 Warning
+Gated clock check  
+Net cpu_inst/myFSM/O7 is a gated clock net sourced by a combinational pin cpu_inst/myFSM/is_write_sig_reg_i_2/O, cell cpu_inst/myFSM/is_write_sig_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#34 Warning
+Gated clock check  
+Net cpu_inst/myFSM/n_1_n_0_309_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/myFSM/n_0_309_BUFG_inst_i_1/O, cell cpu_inst/myFSM/n_0_309_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#35 Warning
+Gated clock check  
+Net cpu_inst/myFSM/n_3_n_2_385_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/myFSM/n_2_385_BUFG_inst_i_1/O, cell cpu_inst/myFSM/n_2_385_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#36 Warning
+Gated clock check  
+Net cpu_inst/myFSM/n_5_n_4_310_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/myFSM/n_4_310_BUFG_inst_i_1/O, cell cpu_inst/myFSM/n_4_310_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#37 Warning
+Gated clock check  
+Net cpu_inst/myFSM/n_7_n_6_1674_BUFG_inst is a gated clock net sourced by a combinational pin cpu_inst/myFSM/n_6_1674_BUFG_inst_i_1/O, cell cpu_inst/myFSM/n_6_1674_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#38 Warning
+Gated clock check  
+Net mem_if/clkb is a gated clock net sourced by a combinational pin mem_if/bram_0_i_1/O, cell mem_if/bram_0_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/DP_subclass_reg[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/myDec/DP_subclass_reg[0] {LDCE}
+    cpu_inst/myDec/DP_subclass_reg[1] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/DT_subclass_reg_i_2 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/myDec/DT_subclass_reg {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[0][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[0][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[0][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[0][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[0][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[0][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[14][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[14][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[14][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[14][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[14][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[14][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[15][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[15][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[15][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[15][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[15][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[15][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[1][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[1][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[1][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[1][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[1][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[1][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[2][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[2][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[2][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[2][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[2][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[2][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#8 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[3][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[3][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[3][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[3][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[3][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[3][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#9 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[4][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[4][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[4][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[4][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[4][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[4][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#10 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[6][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[6][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[6][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[6][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[6][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[6][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#11 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/RF/rf_reg[7][31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[7][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[7][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[7][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[7][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[7][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#12 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/instr_class_reg[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/myDec/instr_class_reg[0] {LDCE}
+    cpu_inst/myDec/instr_class_reg[1] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#13 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/n_10_226_BUFG_inst_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[12][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[12][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[12][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[12][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[12][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#14 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/n_12_229_BUFG_inst_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[9][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[9][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[9][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[9][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[9][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#15 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/n_14_228_BUFG_inst_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[10][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[10][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[10][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[10][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[10][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#16 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/n_16_230_BUFG_inst_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[8][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[8][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[8][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[8][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[8][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#17 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/n_18_225_BUFG_inst_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[13][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[13][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[13][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[13][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[13][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#18 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/n_20_233_BUFG_inst_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[5][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[5][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[5][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[5][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[5][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#19 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/n_8_227_BUFG_inst_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/RF/rf_reg[11][0] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[11][10] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[11][11] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[11][12] {LDCE}
+    cpu_inst/Actor/RF/rf_reg[11][13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#20 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/Actor/operation_reg[3]_i_2 is driving clock pin of 5 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/myDec/operation_reg[3] {LDCE}
+    cpu_inst/myDec/operation_reg[0] {LDCE}
+    cpu_inst/myDec/operation_reg[1] {LDCE}
+    cpu_inst/myDec/operation_reg[2] {LDCE}
+    cpu_inst/myDec/operation_reg[2]_rep {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#21 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/A_reg[31]_i_2 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/A_reg[0] {LDCE}
+    cpu_inst/Actor/A_reg[10] {LDCE}
+    cpu_inst/Actor/A_reg[11] {LDCE}
+    cpu_inst/Actor/A_reg[12] {LDCE}
+    cpu_inst/Actor/A_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#22 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/DIN_MEM_reg[31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/DIN_MEM_reg[12] {LDCE}
+    cpu_inst/Actor/DIN_MEM_reg[13] {LDCE}
+    cpu_inst/Actor/DIN_MEM_reg[14] {LDCE}
+    cpu_inst/Actor/DIN_MEM_reg[15] {LDCE}
+    cpu_inst/Actor/DIN_MEM_reg[16] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#23 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/D_reg[31]_i_2 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/D_reg[0] {LDCE}
+    cpu_inst/Actor/D_reg[10] {LDCE}
+    cpu_inst/Actor/D_reg[11] {LDCE}
+    cpu_inst/Actor/D_reg[12] {LDCE}
+    cpu_inst/Actor/D_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#24 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/O_reg[31]_i_2 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/O_reg[0] {LDCE}
+    cpu_inst/Actor/O_reg[10] {LDCE}
+    cpu_inst/Actor/O_reg[11] {LDCE}
+    cpu_inst/Actor/O_reg[12] {LDCE}
+    cpu_inst/Actor/O_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#25 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/PC_reg[31]_i_1 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/PC_reg[0] {LDCE}
+    cpu_inst/Actor/PC_reg[10] {LDCE}
+    cpu_inst/Actor/PC_reg[11] {LDCE}
+    cpu_inst/Actor/PC_reg[12] {LDCE}
+    cpu_inst/Actor/PC_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#26 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/Res_reg[31]_i_2 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/Res_reg[0] {LDCE}
+    cpu_inst/Actor/Res_reg[10] {LDCE}
+    cpu_inst/Actor/Res_reg[11] {LDCE}
+    cpu_inst/Actor/Res_reg[12] {LDCE}
+    cpu_inst/Actor/Res_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#27 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/WEA_MEM_reg[3]_i_1 is driving clock pin of 13 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/ADDR_MEM_reg[0] {LDCE}
+    cpu_inst/Actor/ADDR_MEM_reg[10] {LDCE}
+    cpu_inst/Actor/ADDR_MEM_reg[11] {LDCE}
+    cpu_inst/Actor/ADDR_MEM_reg[1] {LDCE}
+    cpu_inst/Actor/ADDR_MEM_reg[2] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#28 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/flags_sig_reg[3]_i_2 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/flags_sig_reg[0] {LDCE}
+    cpu_inst/Actor/flags_sig_reg[1] {LDCE}
+    cpu_inst/Actor/flags_sig_reg[2] {LDCE}
+    cpu_inst/Actor/flags_sig_reg[3] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#29 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/g0_b0 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/C_reg[0] {LDCE}
+    cpu_inst/Actor/C_reg[10] {LDCE}
+    cpu_inst/Actor/C_reg[11] {LDCE}
+    cpu_inst/Actor/C_reg[12] {LDCE}
+    cpu_inst/Actor/C_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#30 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/g0_b0__0 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/inp1_sig_reg[0] {LDCE}
+    cpu_inst/Actor/inp1_sig_reg[1] {LDCE}
+    cpu_inst/Actor/inp1_sig_reg[2] {LDCE}
+    cpu_inst/Actor/inp1_sig_reg[3] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#31 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/g0_b0__1 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/inp2_sig_reg[0] {LDCE}
+    cpu_inst/Actor/inp2_sig_reg[1] {LDCE}
+    cpu_inst/Actor/inp2_sig_reg[2] {LDCE}
+    cpu_inst/Actor/inp2_sig_reg[3] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#32 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/g0_b0__2 is driving clock pin of 32 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/data_sig_reg[0] {LDCE}
+    cpu_inst/Actor/data_sig_reg[10] {LDCE}
+    cpu_inst/Actor/data_sig_reg[11] {LDCE}
+    cpu_inst/Actor/data_sig_reg[12] {LDCE}
+    cpu_inst/Actor/data_sig_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#33 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/is_write_sig_reg_i_2 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/is_write_sig_reg {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#34 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/n_0_309_BUFG_inst_i_1 is driving clock pin of 68 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/Flags_reg[0] {LDCE}
+    cpu_inst/Actor/Flags_reg[1] {LDCE}
+    cpu_inst/Actor/Flags_reg[2] {LDCE}
+    cpu_inst/Actor/Flags_reg[3] {LDCE}
+    cpu_inst/Actor/op1_alu_reg[0] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#35 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/n_2_385_BUFG_inst_i_1 is driving clock pin of 64 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/op1_mul_reg[0] {LDCE}
+    cpu_inst/Actor/op1_mul_reg[10] {LDCE}
+    cpu_inst/Actor/op1_mul_reg[11] {LDCE}
+    cpu_inst/Actor/op1_mul_reg[12] {LDCE}
+    cpu_inst/Actor/op1_mul_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#36 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/n_4_310_BUFG_inst_i_1 is driving clock pin of 64 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/B_reg[0] {LDCE}
+    cpu_inst/Actor/B_reg[10] {LDCE}
+    cpu_inst/Actor/B_reg[11] {LDCE}
+    cpu_inst/Actor/B_reg[12] {LDCE}
+    cpu_inst/Actor/B_reg[13] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#37 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu_inst/myFSM/n_6_1674_BUFG_inst_i_1 is driving clock pin of 39 cells. This could lead to large hold time violations. First few involved cells are:
+    cpu_inst/Actor/Shift_amount_reg[0] {LDCE}
+    cpu_inst/Actor/Shift_amount_reg[1] {LDCE}
+    cpu_inst/Actor/Shift_amount_reg[2] {LDCE}
+    cpu_inst/Actor/Shift_amount_reg[3] {LDCE}
+    cpu_inst/Actor/Shift_amount_reg[4] {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#38 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT mem_if/bram_0_i_1 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
+    mem_if/bram_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram {RAMB36E1}
+    mem_if/bram_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram {RAMB36E1}
+    mem_if/bram_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram {RAMB36E1}
+    mem_if/bram_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0] {FDRE}
+    mem_if/bram_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1] {FDRE}
+
+Related violations: <none>
+
+AVAL-4#1 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+myMUL/temp_result: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0', and tie all D inputs to logic '1'.
+Related violations: <none>
+
+AVAL-4#2 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+myMUL/temp_result__0: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0', and tie all D inputs to logic '1'.
+Related violations: <none>
+
+AVAL-4#3 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+myMUL/temp_result__1: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0', and tie all D inputs to logic '1'.
+Related violations: <none>
+
+

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mytypes" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="125" />
+   <wvobject db_ref_id="1" fp_name="/tb/SW" type="array">
+      <obj_property name="ElementShortName">SW[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/BTN" type="array">
+      <obj_property name="ElementShortName">BTN[4:0]</obj_property>
+      <obj_property name="ObjectShortName">BTN[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/LED" type="array">
+      <obj_property name="ElementShortName">LED[15:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/SSEG_CA" type="array">
+      <obj_property name="ElementShortName">SSEG_CA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SSEG_CA[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/SSEG_AN" type="array">
+      <obj_property name="ElementShortName">SSEG_AN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SSEG_AN[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/UART_TXD" type="logic">
+      <obj_property name="ElementShortName">UART_TXD</obj_property>
+      <obj_property name="ObjectShortName">UART_TXD</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/UART_RXD" type="logic">
+      <obj_property name="ElementShortName">UART_RXD</obj_property>
+      <obj_property name="ObjectShortName">UART_RXD</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/VGA_RED" type="array">
+      <obj_property name="ElementShortName">VGA_RED[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_RED[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/VGA_BLUE" type="array">
+      <obj_property name="ElementShortName">VGA_BLUE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_BLUE[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/VGA_GREEN" type="array">
+      <obj_property name="ElementShortName">VGA_GREEN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_GREEN[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/VGA_VS" type="logic">
+      <obj_property name="ElementShortName">VGA_VS</obj_property>
+      <obj_property name="ObjectShortName">VGA_VS</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/VGA_HS" type="logic">
+      <obj_property name="ElementShortName">VGA_HS</obj_property>
+      <obj_property name="ObjectShortName">VGA_HS</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/PS2_CLK" type="logic">
+      <obj_property name="ElementShortName">PS2_CLK</obj_property>
+      <obj_property name="ObjectShortName">PS2_CLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/PS2_DATA" type="logic">
+      <obj_property name="ElementShortName">PS2_DATA</obj_property>
+      <obj_property name="ObjectShortName">PS2_DATA</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/temp" type="logic">
+      <obj_property name="ElementShortName">temp</obj_property>
+      <obj_property name="ObjectShortName">temp</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/UART_RX_CNT" type="array">
+      <obj_property name="ElementShortName">UART_RX_CNT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">UART_RX_CNT[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/clk_mem" type="logic">
+      <obj_property name="ElementShortName">clk_mem</obj_property>
+      <obj_property name="ObjectShortName">clk_mem</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/ena_mem" type="logic">
+      <obj_property name="ElementShortName">ena_mem</obj_property>
+      <obj_property name="ObjectShortName">ena_mem</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/wea_mem" type="array">
+      <obj_property name="ElementShortName">wea_mem[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wea_mem[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/addr_mem" type="array">
+      <obj_property name="ElementShortName">addr_mem[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_mem[11:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/din_mem" type="array">
+      <obj_property name="ElementShortName">din_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din_mem[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/dout_mem" type="array">
+      <obj_property name="ElementShortName">dout_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_mem[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/CLK_CPU" type="logic">
+      <obj_property name="ElementShortName">CLK_CPU</obj_property>
+      <obj_property name="ObjectShortName">CLK_CPU</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/RST" type="logic">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/WEA_MEM" type="array">
+      <obj_property name="ElementShortName">WEA_MEM[3:0]</obj_property>
+      <obj_property name="ObjectShortName">WEA_MEM[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/ADDR_MEM" type="array">
+      <obj_property name="ElementShortName">ADDR_MEM[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_MEM[11:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/DIN_MEM" type="array">
+      <obj_property name="ElementShortName">DIN_MEM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DIN_MEM[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/DOUT_MEM" type="array">
+      <obj_property name="ElementShortName">DOUT_MEM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DOUT_MEM[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/op1_alu" type="array">
+      <obj_property name="ElementShortName">op1_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op1_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/op2_alu" type="array">
+      <obj_property name="ElementShortName">op2_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op2_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/res_alu" type="array">
+      <obj_property name="ElementShortName">res_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">res_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/cond" type="array">
+      <obj_property name="ElementShortName">cond[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cond[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/operation" type="other">
+      <obj_property name="ElementShortName">operation</obj_property>
+      <obj_property name="ObjectShortName">operation</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/not_imp" type="logic">
+      <obj_property name="ElementShortName">not_imp</obj_property>
+      <obj_property name="ObjectShortName">not_imp</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/undef" type="logic">
+      <obj_property name="ElementShortName">undef</obj_property>
+      <obj_property name="ObjectShortName">undef</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/shift_carry" type="logic">
+      <obj_property name="ElementShortName">shift_carry</obj_property>
+      <obj_property name="ObjectShortName">shift_carry</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/predicate" type="logic">
+      <obj_property name="ElementShortName">predicate</obj_property>
+      <obj_property name="ObjectShortName">predicate</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/flags" type="array">
+      <obj_property name="ElementShortName">flags[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flags[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/nxt_flags" type="array">
+      <obj_property name="ElementShortName">nxt_flags[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nxt_flags[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/instr_class" type="array">
+      <obj_property name="ElementShortName">instr_class[1:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_class[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/DT_subclass" type="other">
+      <obj_property name="ElementShortName">DT_subclass</obj_property>
+      <obj_property name="ObjectShortName">DT_subclass</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/DP_subclass" type="other">
+      <obj_property name="ElementShortName">DP_subclass</obj_property>
+      <obj_property name="ObjectShortName">DP_subclass</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/cont_state" type="other">
+      <obj_property name="ElementShortName">cont_state</obj_property>
+      <obj_property name="ObjectShortName">cont_state</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/op1_mul" type="array">
+      <obj_property name="ElementShortName">op1_mul[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op1_mul[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/op2_mul" type="array">
+      <obj_property name="ElementShortName">op2_mul[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op2_mul[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/res_mul" type="array">
+      <obj_property name="ElementShortName">res_mul[31:0]</obj_property>
+      <obj_property name="ObjectShortName">res_mul[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Shifter_in" type="array">
+      <obj_property name="ElementShortName">Shifter_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Shifter_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Shifter_out" type="array">
+      <obj_property name="ElementShortName">Shifter_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Shifter_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Shift_amount" type="array">
+      <obj_property name="ElementShortName">Shift_amount[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_amount[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Shift_type" type="array">
+      <obj_property name="ElementShortName">Shift_type[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_type[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/WEA_MEM_C" type="array">
+      <obj_property name="ElementShortName">WEA_MEM_C[3:0]</obj_property>
+      <obj_property name="ObjectShortName">WEA_MEM_C[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/ADDR_MEM_C" type="array">
+      <obj_property name="ElementShortName">ADDR_MEM_C[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_MEM_C[11:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/DIN_MEM_C" type="array">
+      <obj_property name="ElementShortName">DIN_MEM_C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DIN_MEM_C[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/c_in" type="logic">
+      <obj_property name="ElementShortName">c_in</obj_property>
+      <obj_property name="ObjectShortName">c_in</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/c_out" type="logic">
+      <obj_property name="ElementShortName">c_out</obj_property>
+      <obj_property name="ObjectShortName">c_out</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/N_mul" type="logic">
+      <obj_property name="ElementShortName">N_mul</obj_property>
+      <obj_property name="ObjectShortName">N_mul</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Z_mul" type="logic">
+      <obj_property name="ElementShortName">Z_mul</obj_property>
+      <obj_property name="ObjectShortName">Z_mul</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/inp1" type="array">
+      <obj_property name="ElementShortName">inp1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">inp1[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/inp2" type="array">
+      <obj_property name="ElementShortName">inp2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">inp2[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/data" type="array">
+      <obj_property name="ElementShortName">data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/is_write" type="logic">
+      <obj_property name="ElementShortName">is_write</obj_property>
+      <obj_property name="ObjectShortName">is_write</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/out1" type="array">
+      <obj_property name="ElementShortName">out1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out1[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/out2" type="array">
+      <obj_property name="ElementShortName">out2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out2[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/RF/rf" type="array">
+      <obj_property name="ElementShortName">rf[15:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">rf[15:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/control_state" type="other">
+      <obj_property name="ElementShortName">control_state</obj_property>
+      <obj_property name="ObjectShortName">control_state</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/operation" type="other">
+      <obj_property name="ElementShortName">operation</obj_property>
+      <obj_property name="ObjectShortName">operation</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/op1_alu" type="array">
+      <obj_property name="ElementShortName">op1_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op1_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/op2_alu" type="array">
+      <obj_property name="ElementShortName">op2_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op2_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/result_alu" type="array">
+      <obj_property name="ElementShortName">result_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/op1_mul" type="array">
+      <obj_property name="ElementShortName">op1_mul[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op1_mul[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/op2_mul" type="array">
+      <obj_property name="ElementShortName">op2_mul[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op2_mul[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/result_mul" type="array">
+      <obj_property name="ElementShortName">result_mul[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_mul[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/nextFlags" type="array">
+      <obj_property name="ElementShortName">nextFlags[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nextFlags[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/Flags" type="array">
+      <obj_property name="ElementShortName">Flags[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Flags[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/predicate" type="logic">
+      <obj_property name="ElementShortName">predicate</obj_property>
+      <obj_property name="ObjectShortName">predicate</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/Shifter_in" type="array">
+      <obj_property name="ElementShortName">Shifter_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Shifter_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/Shifter_out" type="array">
+      <obj_property name="ElementShortName">Shifter_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Shifter_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/Shift_amount" type="array">
+      <obj_property name="ElementShortName">Shift_amount[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_amount[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/Shift_type" type="array">
+      <obj_property name="ElementShortName">Shift_type[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Shift_type[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/WEA_MEM" type="array">
+      <obj_property name="ElementShortName">WEA_MEM[3:0]</obj_property>
+      <obj_property name="ObjectShortName">WEA_MEM[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/ADDR_MEM" type="array">
+      <obj_property name="ElementShortName">ADDR_MEM[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_MEM[11:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/DIN_MEM" type="array">
+      <obj_property name="ElementShortName">DIN_MEM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DIN_MEM[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/DOUT_MEM" type="array">
+      <obj_property name="ElementShortName">DOUT_MEM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DOUT_MEM[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/not_implemented" type="logic">
+      <obj_property name="ElementShortName">not_implemented</obj_property>
+      <obj_property name="ObjectShortName">not_implemented</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/DT_subclass" type="other">
+      <obj_property name="ElementShortName">DT_subclass</obj_property>
+      <obj_property name="ObjectShortName">DT_subclass</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/undefined" type="logic">
+      <obj_property name="ElementShortName">undefined</obj_property>
+      <obj_property name="ObjectShortName">undefined</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/inp1_sig" type="array">
+      <obj_property name="ElementShortName">inp1_sig[3:0]</obj_property>
+      <obj_property name="ObjectShortName">inp1_sig[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/inp2_sig" type="array">
+      <obj_property name="ElementShortName">inp2_sig[3:0]</obj_property>
+      <obj_property name="ObjectShortName">inp2_sig[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/data_sig" type="array">
+      <obj_property name="ElementShortName">data_sig[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_sig[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/is_write_sig" type="logic">
+      <obj_property name="ElementShortName">is_write_sig</obj_property>
+      <obj_property name="ObjectShortName">is_write_sig</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/out1_sig" type="array">
+      <obj_property name="ElementShortName">out1_sig[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out1_sig[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/out2_sig" type="array">
+      <obj_property name="ElementShortName">out2_sig[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out2_sig[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/instr" type="array">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/flags_sig" type="array">
+      <obj_property name="ElementShortName">flags_sig[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flags_sig[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/C" type="array">
+      <obj_property name="ElementShortName">C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/D" type="array">
+      <obj_property name="ElementShortName">D[31:0]</obj_property>
+      <obj_property name="ObjectShortName">D[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/O" type="array">
+      <obj_property name="ElementShortName">O[31:0]</obj_property>
+      <obj_property name="ObjectShortName">O[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/E" type="array">
+      <obj_property name="ElementShortName">E[31:0]</obj_property>
+      <obj_property name="ObjectShortName">E[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/Res" type="array">
+      <obj_property name="ElementShortName">Res[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Res[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/DR" type="array">
+      <obj_property name="ElementShortName">DR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DR[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/Actor/PC" type="array">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/instr_class" type="array">
+      <obj_property name="ElementShortName">instr_class[1:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_class[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/DT_subclass" type="other">
+      <obj_property name="ElementShortName">DT_subclass</obj_property>
+      <obj_property name="ObjectShortName">DT_subclass</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/DP_subclass" type="other">
+      <obj_property name="ElementShortName">DP_subclass</obj_property>
+      <obj_property name="ObjectShortName">DP_subclass</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/opt" type="other">
+      <obj_property name="ElementShortName">opt</obj_property>
+      <obj_property name="ObjectShortName">opt</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/instr" type="array">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/control_state_out" type="other">
+      <obj_property name="ElementShortName">control_state_out</obj_property>
+      <obj_property name="ObjectShortName">control_state_out</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myFSM/in_st" type="other">
+      <obj_property name="ElementShortName">in_st</obj_property>
+      <obj_property name="ObjectShortName">in_st</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myDec/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myDec/instr_class" type="array">
+      <obj_property name="ElementShortName">instr_class[1:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_class[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myDec/DT_subclass" type="other">
+      <obj_property name="ElementShortName">DT_subclass</obj_property>
+      <obj_property name="ObjectShortName">DT_subclass</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myDec/DP_subclass" type="other">
+      <obj_property name="ElementShortName">DP_subclass</obj_property>
+      <obj_property name="ObjectShortName">DP_subclass</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myDec/operation" type="other">
+      <obj_property name="ElementShortName">operation</obj_property>
+      <obj_property name="ObjectShortName">operation</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myDec/undefined" type="logic">
+      <obj_property name="ElementShortName">undefined</obj_property>
+      <obj_property name="ObjectShortName">undefined</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb/cpu_inst/myDec/not_implemented" type="logic">
+      <obj_property name="ElementShortName">not_implemented</obj_property>
+      <obj_property name="ObjectShortName">not_implemented</obj_property>
+   </wvobject>
+</wave_config>
