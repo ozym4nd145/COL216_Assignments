@@ -32,22 +32,13 @@ USE work.MyTypes.ALL;
 
 ENTITY ARM_CPU IS
 	PORT (
---		CLK_CPU : IN STD_LOGIC;
---		RST : IN std_logic;
-		
-		HREADY : IN std_logic;
-		HRESP : IN std_logic;
-		HCLK : IN std_logic;
-		HRESETn : IN std_logic;
-		HRDATA : IN std_logic_vector (31 downto 0);
-		
-		HADDR : OUT std_logic_vector (15 downto 0);
-		HWRITE : OUT std_logic;
-		HSIZE : OUT std_logic_vector (2 downto 0);
-		HBURST : OUT std_logic_vector (2 downto 0);
-		HTRANS : OUT std_logic_vector (1 downto 0);
-		HWDATA : OUT std_logic_vector (31 downto 0)
-        
+		CLK_CPU : IN STD_LOGIC;
+		RST : IN std_logic;
+		WEA_MEM :  OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+        ADDR_MEM : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+        DIN_MEM :  OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        DOUT_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+	
 	);
 END ARM_CPU;
 
@@ -141,10 +132,7 @@ ARCHITECTURE Behavioral OF ARM_CPU IS
 			undefined : IN std_logic
 		);
 	END COMPONENT;
-	    SIGNAL WEA_MEM : STD_LOGIC_VECTOR(3 DOWNTO 0);
-        SIGNAL ADDR_MEM : STD_LOGIC_VECTOR(11 DOWNTO 0);
-        SIGNAL DIN_MEM :  STD_LOGIC_VECTOR(31 DOWNTO 0);
-        SIGNAL DOUT_MEM :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+	  
         
 		SIGNAL op1_alu : std_logic_vector(31 DOWNTO 0) := (OTHERS => '0');
         SIGNAL op2_alu : std_logic_vector(31 DOWNTO 0) := (OTHERS => '0');
@@ -268,4 +256,10 @@ BEGIN
     ADDR_MEM <= ADDR_MEM_C;
     DIN_MEM <= DIN_MEM_C; 
 	cond <= instruction( 31 downto 28);
+	
+	
+	
+	
+	
+	
 END Behavioral;
