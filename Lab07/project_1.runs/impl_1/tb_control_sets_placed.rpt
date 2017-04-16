@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date         : Sun Apr 09 00:33:49 2017
+| Date         : Tue Apr 11 23:50:51 2017
 | Host         : admin-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file tb_control_sets_placed.rpt
 | Design       : tb
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    51 |
-| Minimum Number of register sites lost to control set restrictions |   100 |
+| Number of unique control sets                                     |    53 |
+| Minimum Number of register sites lost to control set restrictions |   108 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,72 +33,74 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              99 |           42 |
+| No           | No                    | No                     |              14 |            8 |
 | No           | No                    | Yes                    |              44 |           15 |
-| No           | Yes                   | No                     |             951 |          434 |
+| No           | Yes                   | No                     |            1044 |          528 |
 | Yes          | No                    | No                     |               4 |            2 |
 | Yes          | No                    | Yes                    |              64 |           18 |
-| Yes          | Yes                   | No                     |              26 |           13 |
+| Yes          | Yes                   | No                     |              26 |           16 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------------------+--------------------------------------------+------------------+------------------+----------------+
-|                Clock Signal                |                Enable Signal               | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------------------------------------+--------------------------------------------+------------------+------------------+----------------+
-|  cpu_inst/Actor/O29                        |                                            |                  |                1 |              1 |
-|  cpu_inst/myFSM/O7                         |                                            | SW_IBUF[2]       |                1 |              1 |
-|  rx_clk                                    |                                            |                  |                1 |              1 |
-|  cpu_inst/Actor/O4[0]                      |                                            |                  |                1 |              2 |
-|  cpu_inst/Actor/O27[0]                     |                                            |                  |                1 |              2 |
-|  mem_if/tx_clk                             |                                            | BTN_IBUF[4]      |                1 |              2 |
-|  cpu_inst/myFSM/I32[0]                     |                                            | SW_IBUF[2]       |                3 |              4 |
-|  cpu_inst/myFSM/I29[0]                     |                                            | SW_IBUF[2]       |                3 |              4 |
-|  cpu_inst/myFSM/I34[0]                     |                                            | SW_IBUF[2]       |                2 |              4 |
-|  mem_if/clkb                               | mem_if/enb                                 |                  |                2 |              4 |
-|  mem_if/tx_clk                             | mem_if/uart_inst/n_22_tx_cnt[3]_i_1        | BTN_IBUF[4]      |                1 |              4 |
-|  rx_clk                                    | mem_if/uart_inst/n_22_rx_sample_cnt[3]_i_1 | BTN_IBUF[4]      |                1 |              4 |
-|  rx_clk                                    | mem_if/uart_inst/n_22_rx_cnt[3]_i_1        | BTN_IBUF[4]      |                1 |              4 |
-|  xlnx_opt_                                 |                                            |                  |                2 |              4 |
-|  cpu_inst/Actor/O26[0]                     |                                            |                  |                2 |              5 |
-|  xlnx_opt_                                 |                                            | SW_IBUF[2]       |                4 |              6 |
-|  rx_clk                                    | mem_if/uart_inst/E[0]                      | BTN_IBUF[4]      |                3 |              8 |
-|  rx_clk                                    |                                            | BTN_IBUF[4]      |                4 |             12 |
-|  cpu_inst/myFSM/E[0]                       |                                            |                  |                6 |             13 |
-|  mem_if/tx_clk                             | mem_if/uart_inst/tx_empty                  | BTN_IBUF[4]      |                6 |             22 |
-|  rx_clk                                    | mem_if/rx_empty_not_delayed                | BTN_IBUF[4]      |                6 |             22 |
-|  xlnx_opt_                                 | cpu_inst/myDec/E[0]                        | SW_IBUF[2]       |               13 |             26 |
-|  xlnx_opt_                                 |                                            | BTN_IBUF[4]      |               10 |             30 |
-|  cpu_inst/myFSM/I30[0]                     |                                            | SW_IBUF[2]       |               11 |             32 |
-|  cpu_inst/myFSM/I37[0]                     |                                            | SW_IBUF[2]       |               10 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[0][31]_i_1  |                                            | SW_IBUF[2]       |               19 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[14][31]_i_1 |                                            | SW_IBUF[2]       |               17 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[15][31]_i_1 |                                            | SW_IBUF[2]       |               17 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[2][31]_i_1  |                                            | SW_IBUF[2]       |               16 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[3][31]_i_1  |                                            | SW_IBUF[2]       |               13 |             32 |
-|  n_10_226_BUFG                             |                                            | SW_IBUF[2]       |               21 |             32 |
-|  n_12_229_BUFG                             |                                            | SW_IBUF[2]       |               15 |             32 |
-|  n_14_228_BUFG                             |                                            | SW_IBUF[2]       |               23 |             32 |
-|  n_16_230_BUFG                             |                                            | SW_IBUF[2]       |               15 |             32 |
-|  n_18_225_BUFG                             |                                            | SW_IBUF[2]       |               20 |             32 |
-|  n_20_233_BUFG                             |                                            | SW_IBUF[2]       |               13 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[4][31]_i_1  |                                            | SW_IBUF[2]       |               14 |             32 |
-|  n_8_227_BUFG                              |                                            | SW_IBUF[2]       |               22 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[6][31]_i_1  |                                            | SW_IBUF[2]       |               14 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[7][31]_i_1  |                                            | SW_IBUF[2]       |               14 |             32 |
-|  cpu_inst/Actor/RF/n_22_rf_reg[1][31]_i_1  |                                            | SW_IBUF[2]       |               14 |             32 |
-|  cpu_inst/myFSM/I36[0]                     |                                            | SW_IBUF[2]       |               10 |             32 |
-|  cpu_inst/myFSM/I22[0]                     |                                            | SW_IBUF[2]       |               12 |             32 |
-|  cpu_inst/myFSM/I21[0]                     |                                            |                  |               10 |             32 |
-|  cpu_inst/myFSM/I24[0]                     |                                            | SW_IBUF[2]       |               12 |             32 |
-|  cpu_inst/myFSM/I25[0]                     |                                            | SW_IBUF[2]       |               11 |             32 |
-|  cpu_inst/myFSM/I27[0]                     |                                            | SW_IBUF[2]       |               11 |             32 |
-|  n_6_1674_BUFG                             |                                            |                  |               18 |             39 |
-|  n_2_385_BUFG                              |                                            | SW_IBUF[2]       |               18 |             64 |
-|  n_4_310_BUFG                              |                                            | SW_IBUF[2]       |               24 |             64 |
-|  n_0_309_BUFG                              |                                            | SW_IBUF[2]       |               35 |             68 |
-+--------------------------------------------+--------------------------------------------+------------------+------------------+----------------+
++--------------------------------------------+----------------------------------------------+------------------------------------+------------------+----------------+
+|                Clock Signal                |                 Enable Signal                |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
++--------------------------------------------+----------------------------------------------+------------------------------------+------------------+----------------+
+|  cpu_inst/Actor/O100                       |                                              |                                    |                1 |              1 |
+|  cpu_inst/myFSM/O15                        |                                              | SW_IBUF[2]                         |                1 |              1 |
+|  rx_clk                                    |                                              |                                    |                1 |              1 |
+|  mem_if/tx_clk                             |                                              | BTN_IBUF[4]                        |                1 |              2 |
+|  cpu_inst/Actor/O123[0]                    |                                              |                                    |                1 |              2 |
+|  cpu_inst/myFSM/O20[0]                     |                                              | SW_IBUF[2]                         |                1 |              2 |
+|  cpu_inst/Actor/O32[0]                     |                                              |                                    |                2 |              2 |
+|  mem_if/clkb                               | mem_if/enb                                   |                                    |                2 |              4 |
+|  xlnx_opt_                                 |                                              |                                    |                2 |              4 |
+|  cpu_inst/Actor/E[0]                       |                                              |                                    |                1 |              4 |
+|  rx_clk                                    | mem_if/uart_inst/n_22_rx_cnt[3]_i_1          | BTN_IBUF[4]                        |                1 |              4 |
+|  cpu_inst/myFSM/I44[0]                     |                                              | SW_IBUF[2]                         |                3 |              4 |
+|  cpu_inst/myFSM/I46[0]                     |                                              | SW_IBUF[2]                         |                3 |              4 |
+|  cpu_inst/myFSM/O12[0]                     |                                              | SW_IBUF[2]                         |                3 |              4 |
+|  rx_clk                                    | mem_if/uart_inst/n_22_rx_sample_cnt[3]_i_1   | BTN_IBUF[4]                        |                1 |              4 |
+|  cpu_inst/myFSM/O17[0]                     |                                              | SW_IBUF[2]                         |                2 |              4 |
+|  mem_if/tx_clk                             | mem_if/uart_inst/n_22_tx_cnt[3]_i_1          | BTN_IBUF[4]                        |                1 |              4 |
+|  rx_clk                                    | mem_if/uart_inst/E[0]                        | BTN_IBUF[4]                        |                3 |              8 |
+|  xlnx_opt_                                 |                                              | cpu_inst/myFSM/n_22_tmrCntr[9]_i_1 |                3 |             10 |
+|  rx_clk                                    |                                              | BTN_IBUF[4]                        |                5 |             12 |
+|  cpu_inst/myFSM/O16[0]                     |                                              | SW_IBUF[2]                         |                7 |             16 |
+|  rx_clk                                    | mem_if/rx_empty_not_delayed                  | BTN_IBUF[4]                        |                6 |             22 |
+|  mem_if/tx_clk                             | mem_if/uart_inst/tx_empty                    | BTN_IBUF[4]                        |                6 |             22 |
+|  xlnx_opt_                                 | cpu_inst/myFSM/n_22_FSM_onehot_in_st[26]_i_1 | SW_IBUF[2]                         |               16 |             26 |
+|  xlnx_opt_                                 |                                              | BTN_IBUF[4]                        |                9 |             30 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[0][31]_i_1  |                                              | SW_IBUF[2]                         |               24 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[14][31]_i_1 |                                              | SW_IBUF[2]                         |               19 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[15][31]_i_1 |                                              | SW_IBUF[2]                         |               17 |             32 |
+|  cpu_inst/myFSM/O27[0]                     |                                              | SW_IBUF[2]                         |               13 |             32 |
+|  cpu_inst/myFSM/O21[0]                     |                                              | SW_IBUF[2]                         |               15 |             32 |
+|  cpu_inst/myFSM/O19[0]                     |                                              | SW_IBUF[2]                         |               13 |             32 |
+|  cpu_inst/myFSM/O18[0]                     |                                              | SW_IBUF[2]                         |                9 |             32 |
+|  cpu_inst/myFSM/O14[0]                     |                                              | SW_IBUF[2]                         |               10 |             32 |
+|  n_10_226_BUFG                             |                                              | SW_IBUF[2]                         |               21 |             32 |
+|  n_12_229_BUFG                             |                                              | SW_IBUF[2]                         |               17 |             32 |
+|  n_14_228_BUFG                             |                                              | SW_IBUF[2]                         |               26 |             32 |
+|  n_16_230_BUFG                             |                                              | SW_IBUF[2]                         |               17 |             32 |
+|  n_18_225_BUFG                             |                                              | SW_IBUF[2]                         |               19 |             32 |
+|  n_20_233_BUFG                             |                                              | SW_IBUF[2]                         |               18 |             32 |
+|  cpu_inst/myFSM/O13[0]                     |                                              | SW_IBUF[2]                         |               13 |             32 |
+|  n_8_227_BUFG                              |                                              | SW_IBUF[2]                         |               22 |             32 |
+|  cpu_inst/myFSM/I37[0]                     |                                              | SW_IBUF[2]                         |               14 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[2][31]_i_1  |                                              | SW_IBUF[2]                         |               17 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[7][31]_i_1  |                                              | SW_IBUF[2]                         |               18 |             32 |
+|  cpu_inst/myFSM/O24[0]                     |                                              | SW_IBUF[2]                         |               15 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[6][31]_i_1  |                                              | SW_IBUF[2]                         |               22 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[4][31]_i_1  |                                              | SW_IBUF[2]                         |               17 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[3][31]_i_1  |                                              | SW_IBUF[2]                         |               19 |             32 |
+|  cpu_inst/Actor/RF/n_22_rf_reg[1][31]_i_1  |                                              | SW_IBUF[2]                         |               18 |             32 |
+|  n_6_464_BUFG                              |                                              | SW_IBUF[2]                         |               13 |             39 |
+|  n_0_465_BUFG                              |                                              | SW_IBUF[2]                         |               19 |             64 |
+|  n_2_508_BUFG                              |                                              | SW_IBUF[2]                         |               37 |             64 |
+|  n_4_466_BUFG                              |                                              | SW_IBUF[2]                         |               23 |             64 |
++--------------------------------------------+----------------------------------------------+------------------------------------+------------------+----------------+
 
 

@@ -11,15 +11,15 @@ set_property target_language Verilog [current_project]
 set_param project.compositeFile.enableAutoGeneration 0
 set_property default_lib xil_defaultlib [current_project]
 
-read_ip C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files c:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp]
-set_property used_in_implementation false [get_files -all c:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp]
+read_ip C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files c:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp]
+set_property used_in_implementation false [get_files -all c:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp]
 set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property is_locked true [get_files C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+set_property is_locked true [get_files C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
 
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Madhur/Desktop/with_ldr_str/project_1.cache/wt [current_project]
-set_property parent.project_dir C:/Users/Madhur/Desktop/with_ldr_str [current_project]
+set_property webtalk.parent_dir C:/Users/Madhur/Documents/Lab07/project_1.cache/wt [current_project]
+set_property parent.project_dir C:/Users/Madhur/Documents/Lab07 [current_project]
 catch { write_hwdef -file blk_mem_gen_0.hwdef }
 synth_design -top blk_mem_gen_0 -part xc7a35tcpg236-1 -mode out_of_context
 
@@ -27,11 +27,11 @@ rename_ref -prefix_all blk_mem_gen_0_
 write_checkpoint -noxdef blk_mem_gen_0.dcp
 report_utilization -file blk_mem_gen_0_utilization_synth.rpt -pb blk_mem_gen_0_utilization_synth.pb
 if { [catch {
-  file copy -force C:/Users/Madhur/Desktop/with_ldr_str/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp
-  write_verilog -force -mode synth_stub C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v
-  write_vhdl -force -mode synth_stub C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
-  write_verilog -force -mode funcsim C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.v
-  write_vhdl -force -mode funcsim C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.vhdl
+  file copy -force C:/Users/Madhur/Documents/Lab07/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp
+  write_verilog -force -mode synth_stub C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v
+  write_vhdl -force -mode synth_stub C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
+  write_verilog -force -mode funcsim C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.v
+  write_vhdl -force -mode funcsim C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.vhdl
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "Unable to successfully create or copy supporting IP files."
   return -code error

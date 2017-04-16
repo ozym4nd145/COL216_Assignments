@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1491678151">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1491934784">
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <File Type="PWROPT-DCP" Name="tb_pwropt.dcp"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
-  <File Type="OPT-DRC" Name="tb_drc_opted.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="tb_timing_summary_routed.pb"/>
   <File Type="PA-TCL" Name="tb.tcl"/>
+  <File Type="OPT-DRC" Name="tb_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="tb_opt.dcp"/>
   <File Type="PWROPT-DRC" Name="tb_drc_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="tb_placed.dcp"/>
@@ -30,8 +30,8 @@
   <File Type="ROUTE-SIMILARITY" Name="tb_incremental_reuse_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="tb_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="tb_timing_summary_postroute_physopted.rpt"/>
-  <File Type="RDI-RDI" Name="tb.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="tb_timing_summary_postroute_physopted.pb"/>
+  <File Type="RDI-RDI" Name="tb.vdi"/>
   <File Type="BG-BIT" Name="tb.bit"/>
   <File Type="BG-BIN" Name="tb.bin"/>
   <File Type="BITSTR-MSK" Name="tb.msk"/>

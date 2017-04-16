@@ -18,30 +18,30 @@ source tb.tcl
 # set_property target_language Verilog [current_project]
 # set_param project.compositeFile.enableAutoGeneration 0
 # set_property default_lib xil_defaultlib [current_project]
-# add_files C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/ip/blk_mem_gen_0/data.coe
-# add_files -quiet C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp
-# set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp]
+# add_files C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/ip/blk_mem_gen_0/data.coe
+# add_files -quiet C:/Users/admin/Desktop/Suyash/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp
+# set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp]
 # read_vhdl -library xil_defaultlib {
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/MyTypes.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_multiplier.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd
-#   C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/MyTypes.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_multiplier.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd
+#   C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd
 # }
-# read_xdc C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc
-# set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
+# read_xdc C:/Users/admin/Desktop/Suyash/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc
+# set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
 # read_xdc dont_buffer.xdc
 # set_property used_in_implementation false [get_files dont_buffer.xdc]
 # set_param synth.vivado.isSynthRun true
-# set_property webtalk.parent_dir C:/Users/admin/Desktop/Suyash/not_implementing/project_1.cache/wt [current_project]
-# set_property parent.project_dir C:/Users/admin/Desktop/Suyash/not_implementing [current_project]
+# set_property webtalk.parent_dir C:/Users/admin/Desktop/Suyash/project_1.cache/wt [current_project]
+# set_property parent.project_dir C:/Users/admin/Desktop/Suyash [current_project]
 # catch { write_hwdef -file tb.hwdef }
 INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
 # synth_design -top tb -part xc7a35tcpg236-1
@@ -52,60 +52,63 @@ Starting synthesis...
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 230.664 ; gain = 97.652
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 228.652 ; gain = 98.180
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'tb' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:28]
-INFO: [Synth 8-3491] module 'memory_uart' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd:35' bound to instance 'mem_if' of component 'memory_uart' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'memory_uart' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd:55]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/.Xil/Vivado-4176-admin-PC/realtime/blk_mem_gen_0_stub.v:7' bound to instance 'bram_0' of component 'blk_mem_gen_0' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd:242]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/.Xil/Vivado-4176-admin-PC/realtime/blk_mem_gen_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (1#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/.Xil/Vivado-4176-admin-PC/realtime/blk_mem_gen_0_stub.v:7]
-INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd:45' bound to instance 'uart_inst' of component 'uart' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd:356]
-INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd:62]
-INFO: [Synth 8-256] done synthesizing module 'uart' (2#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd:62]
-WARNING: [Synth 8-3936] Found unconnected internal register 'mem_addrb_reg' and it is trimmed from '32' to '14' bits. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd:220]
-INFO: [Synth 8-256] done synthesizing module 'memory_uart' (3#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd:55]
-INFO: [Synth 8-3491] module 'ARM_CPU' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:33' bound to instance 'cpu_inst' of component 'ARM_CPU' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:111]
-INFO: [Synth 8-638] synthesizing module 'ARM_CPU' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:44]
-INFO: [Synth 8-3491] module 'Actions' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:34' bound to instance 'Actor' of component 'Actions' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:164]
-INFO: [Synth 8-638] synthesizing module 'Actions' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:64]
-INFO: [Synth 8-3491] module 'ARM_rf' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:16' bound to instance 'RF' of component 'ARM_rf' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'ARM_rf' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:28]
-INFO: [Synth 8-256] done synthesizing module 'ARM_rf' (4#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:28]
-WARNING: [Synth 8-614] signal 'instr' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'B' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'C' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'A' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'D' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'flags_sig' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'nextFlags' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'Res' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-WARNING: [Synth 8-614] signal 'O' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:115]
-INFO: [Synth 8-256] done synthesizing module 'Actions' (5#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:64]
-INFO: [Synth 8-3491] module 'Control_FSM' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd:33' bound to instance 'myFSM' of component 'Control_FSM' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:191]
-INFO: [Synth 8-638] synthesizing module 'Control_FSM' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'Control_FSM' (6#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd:45]
-INFO: [Synth 8-3491] module 'Decoder' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:33' bound to instance 'myDec' of component 'Decoder' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:202]
-INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'Decoder' (7#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:43]
-INFO: [Synth 8-3491] module 'Shifter' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:33' bound to instance 'myShift' of component 'Shifter' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:212]
-INFO: [Synth 8-638] synthesizing module 'Shifter' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'Shifter' (8#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:49]
-INFO: [Synth 8-3491] module 'ARM_alu' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:6' bound to instance 'myALU' of component 'ARM_alu' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:223]
-INFO: [Synth 8-638] synthesizing module 'ARM_alu' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'ARM_alu' (9#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:26]
-INFO: [Synth 8-3491] module 'ARM_multiplier' declared at 'C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_multiplier.vhd:14' bound to instance 'myMUL' of component 'ARM_multiplier' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:238]
-INFO: [Synth 8-638] synthesizing module 'ARM_multiplier' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_multiplier.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'ARM_multiplier' (10#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_multiplier.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'ARM_CPU' (11#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:44]
-WARNING: [Synth 8-3848] Net SSEG_CA in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:14]
-WARNING: [Synth 8-3848] Net SSEG_AN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:15]
-WARNING: [Synth 8-3848] Net VGA_RED in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:18]
-WARNING: [Synth 8-3848] Net VGA_BLUE in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:19]
-WARNING: [Synth 8-3848] Net VGA_GREEN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:20]
-WARNING: [Synth 8-3848] Net VGA_VS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:21]
-WARNING: [Synth 8-3848] Net VGA_HS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'tb' (12#1) [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'tb' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:28]
+INFO: [Synth 8-3491] module 'memory_uart' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd:35' bound to instance 'mem_if' of component 'memory_uart' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'memory_uart' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd:55]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/.Xil/Vivado-2548-admin-PC/realtime/blk_mem_gen_0_stub.v:7' bound to instance 'bram_0' of component 'blk_mem_gen_0' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd:242]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/.Xil/Vivado-2548-admin-PC/realtime/blk_mem_gen_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (1#1) [C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/.Xil/Vivado-2548-admin-PC/realtime/blk_mem_gen_0_stub.v:7]
+INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd:45' bound to instance 'uart_inst' of component 'uart' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd:356]
+INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'uart' (2#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd:62]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mem_addrb_reg' and it is trimmed from '32' to '14' bits. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd:220]
+INFO: [Synth 8-256] done synthesizing module 'memory_uart' (3#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd:55]
+INFO: [Synth 8-3491] module 'ARM_CPU' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:33' bound to instance 'cpu_inst' of component 'ARM_CPU' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'ARM_CPU' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:44]
+INFO: [Synth 8-3491] module 'Actions' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:34' bound to instance 'Actor' of component 'Actions' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'Actions' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:67]
+INFO: [Synth 8-3491] module 'ARM_rf' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:16' bound to instance 'RF' of component 'ARM_rf' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'ARM_rf' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'ARM_rf' (4#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:28]
+WARNING: [Synth 8-614] signal 'instr' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'B' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'C' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'A' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'D' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'flags_sig' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'operation' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'nextFlags' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'Res' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'O' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'DT_subclass' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+WARNING: [Synth 8-614] signal 'DR' is read in the process but is not in the sensitivity list [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'Actions' (5#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:67]
+INFO: [Synth 8-3491] module 'Control_FSM' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd:34' bound to instance 'myFSM' of component 'Control_FSM' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'Control_FSM' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Control_FSM' (6#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd:46]
+INFO: [Synth 8-3491] module 'Decoder' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:33' bound to instance 'myDec' of component 'Decoder' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Decoder' (7#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:43]
+INFO: [Synth 8-3491] module 'Shifter' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:33' bound to instance 'myShift' of component 'Shifter' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:218]
+INFO: [Synth 8-638] synthesizing module 'Shifter' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'Shifter' (8#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:49]
+INFO: [Synth 8-3491] module 'ARM_alu' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:6' bound to instance 'myALU' of component 'ARM_alu' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:229]
+INFO: [Synth 8-638] synthesizing module 'ARM_alu' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'ARM_alu' (9#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:26]
+INFO: [Synth 8-3491] module 'ARM_multiplier' declared at 'C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_multiplier.vhd:14' bound to instance 'myMUL' of component 'ARM_multiplier' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'ARM_multiplier' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_multiplier.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ARM_multiplier' (10#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_multiplier.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ARM_CPU' (11#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd:44]
+WARNING: [Synth 8-3848] Net SSEG_CA in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:14]
+WARNING: [Synth 8-3848] Net SSEG_AN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:15]
+WARNING: [Synth 8-3848] Net VGA_RED in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:18]
+WARNING: [Synth 8-3848] Net VGA_BLUE in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:19]
+WARNING: [Synth 8-3848] Net VGA_GREEN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:20]
+WARNING: [Synth 8-3848] Net VGA_VS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:21]
+WARNING: [Synth 8-3848] Net VGA_HS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'tb' (12#1) [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:28]
 WARNING: [Synth 8-3331] design tb has unconnected port SSEG_CA[7]
 WARNING: [Synth 8-3331] design tb has unconnected port SSEG_CA[6]
 WARNING: [Synth 8-3331] design tb has unconnected port SSEG_CA[5]
@@ -152,7 +155,7 @@ WARNING: [Synth 8-3331] design tb has unconnected port BTN[2]
 WARNING: [Synth 8-3331] design tb has unconnected port BTN[1]
 WARNING: [Synth 8-3331] design tb has unconnected port BTN[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 264.480 ; gain = 131.469
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 263.590 ; gain = 133.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Optimization
@@ -173,10 +176,10 @@ Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/artix7/IOS
 Loading device configuration modes from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/ConfigModes.xml
 
 Processing XDC Constraints
-Parsing XDC File [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
-Finished Parsing XDC File [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
-Parsing XDC File [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/dont_buffer.xdc]
-Finished Parsing XDC File [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/dont_buffer.xdc]
+Parsing XDC File [C:/Users/admin/Desktop/Suyash/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/admin/Desktop/Suyash/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
+Parsing XDC File [C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/dont_buffer.xdc]
+Finished Parsing XDC File [C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/dont_buffer.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -190,73 +193,74 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 470.664 ; gain = 337.652
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 469.746 ; gain = 339.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property BUFFER_TYPE = NONE for CLK. (constraint file  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for CLK. (constraint file  C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/dont_buffer.xdc, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 470.664 ; gain = 337.652
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 469.746 ; gain = 339.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 470.664 ; gain = 337.652
+Finished RTL Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 469.746 ; gain = 339.273
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'in_st_reg' in module 'Control_FSM'
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:40]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[15]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[14]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[13]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[12]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[11]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[10]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[9]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[8]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[7]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[6]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[5]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[4]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[3]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[2]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[1]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[0]' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
-WARNING: [Synth 8-327] inferring latch for variable 'instr_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:130]
-WARNING: [Synth 8-327] inferring latch for variable 'op1_alu_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:136]
-WARNING: [Synth 8-327] inferring latch for variable 'op2_alu_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:137]
-WARNING: [Synth 8-327] inferring latch for variable 'op1_mul_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:134]
-WARNING: [Synth 8-327] inferring latch for variable 'op2_mul_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:135]
-WARNING: [Synth 8-327] inferring latch for variable 'Flags_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:138]
-WARNING: [Synth 8-327] inferring latch for variable 'Shifter_in_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:167]
-WARNING: [Synth 8-327] inferring latch for variable 'Shift_amount_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:168]
-WARNING: [Synth 8-327] inferring latch for variable 'Shift_type_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:169]
-WARNING: [Synth 8-327] inferring latch for variable 'WEA_MEM_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:144]
-WARNING: [Synth 8-327] inferring latch for variable 'ADDR_MEM_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:147]
-WARNING: [Synth 8-327] inferring latch for variable 'DIN_MEM_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:267]
-WARNING: [Synth 8-327] inferring latch for variable 'A_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:121]
-WARNING: [Synth 8-327] inferring latch for variable 'C_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:123]
-WARNING: [Synth 8-327] inferring latch for variable 'D_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:124]
-WARNING: [Synth 8-327] inferring latch for variable 'O_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:125]
-WARNING: [Synth 8-327] inferring latch for variable 'B_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:122]
-WARNING: [Synth 8-327] inferring latch for variable 'flags_sig_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:120]
-WARNING: [Synth 8-327] inferring latch for variable 'PC_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:129]
-WARNING: [Synth 8-327] inferring latch for variable 'inp1_sig_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:103]
-WARNING: [Synth 8-327] inferring latch for variable 'inp2_sig_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:104]
-WARNING: [Synth 8-327] inferring latch for variable 'data_sig_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'is_write_sig_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:106]
-WARNING: [Synth 8-327] inferring latch for variable 'Res_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:127]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd:39]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[15]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[14]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[13]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[12]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[11]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[10]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[9]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[8]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[7]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[6]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[5]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[4]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[3]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[2]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[1]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_reg[0]' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd:33]
+WARNING: [Synth 8-327] inferring latch for variable 'instr_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:131]
+WARNING: [Synth 8-327] inferring latch for variable 'op1_alu_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:137]
+WARNING: [Synth 8-327] inferring latch for variable 'op2_alu_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:138]
+WARNING: [Synth 8-327] inferring latch for variable 'op1_mul_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:135]
+WARNING: [Synth 8-327] inferring latch for variable 'op2_mul_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:136]
+WARNING: [Synth 8-327] inferring latch for variable 'Flags_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:139]
+WARNING: [Synth 8-327] inferring latch for variable 'Shifter_in_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:142]
+WARNING: [Synth 8-327] inferring latch for variable 'Shift_amount_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:143]
+WARNING: [Synth 8-327] inferring latch for variable 'Shift_type_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:144]
+WARNING: [Synth 8-327] inferring latch for variable 'WEA_MEM_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:146]
+WARNING: [Synth 8-327] inferring latch for variable 'ADDR_MEM_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:147]
+WARNING: [Synth 8-327] inferring latch for variable 'DIN_MEM_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:148]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:122]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:124]
+WARNING: [Synth 8-327] inferring latch for variable 'D_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:125]
+WARNING: [Synth 8-327] inferring latch for variable 'O_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:126]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:123]
+WARNING: [Synth 8-327] inferring latch for variable 'flags_sig_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:140]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:130]
+WARNING: [Synth 8-327] inferring latch for variable 'inp1_sig_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'inp2_sig_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'data_sig_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'is_write_sig_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:108]
+WARNING: [Synth 8-327] inferring latch for variable 'Res_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:128]
+WARNING: [Synth 8-327] inferring latch for variable 'DR_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd:129]
 INFO: [Synth 8-3354] encoded FSM with state register 'in_st_reg' using encoding 'one-hot' in module 'Control_FSM'
-WARNING: [Synth 8-327] inferring latch for variable 'instr_class_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:61]
-WARNING: [Synth 8-327] inferring latch for variable 'DT_subclass_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:113]
-WARNING: [Synth 8-327] inferring latch for variable 'DP_subclass_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:53]
-WARNING: [Synth 8-327] inferring latch for variable 'operation_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:64]
-WARNING: [Synth 8-327] inferring latch for variable 'Shifter_out_reg' [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:53]
-WARNING: [Synth 8-3848] Net SSEG_CA in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:14]
-WARNING: [Synth 8-3848] Net SSEG_AN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:15]
-WARNING: [Synth 8-3848] Net VGA_RED in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:18]
-WARNING: [Synth 8-3848] Net VGA_BLUE in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:19]
-WARNING: [Synth 8-3848] Net VGA_GREEN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:20]
-WARNING: [Synth 8-3848] Net VGA_VS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:21]
-WARNING: [Synth 8-3848] Net VGA_HS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd:22]
+WARNING: [Synth 8-327] inferring latch for variable 'instr_class_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 'DT_subclass_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:113]
+WARNING: [Synth 8-327] inferring latch for variable 'DP_subclass_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:53]
+WARNING: [Synth 8-327] inferring latch for variable 'operation_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd:64]
+WARNING: [Synth 8-327] inferring latch for variable 'Shifter_out_reg' [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd:53]
+WARNING: [Synth 8-3848] Net SSEG_CA in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:14]
+WARNING: [Synth 8-3848] Net SSEG_AN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:15]
+WARNING: [Synth 8-3848] Net VGA_RED in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:18]
+WARNING: [Synth 8-3848] Net VGA_BLUE in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:19]
+WARNING: [Synth 8-3848] Net VGA_GREEN in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:20]
+WARNING: [Synth 8-3848] Net VGA_VS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:21]
+WARNING: [Synth 8-3848] Net VGA_HS in module/entity tb does not have driver. [C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd:22]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -271,43 +275,47 @@ Detailed RTL Component Info :
 	   4 Input     32 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 2     
 	   2 Input     32 Bit       Adders := 7     
+	   2 Input     10 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 3     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
-	   2 Input      1 Bit         XORs := 2     
 	   3 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
+	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
-	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   3 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 1     
-	  27 Input     32 Bit        Muxes := 3     
-	   2 Input     32 Bit        Muxes := 1     
 	  16 Input     32 Bit        Muxes := 2     
+	  27 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 12    
 	  38 Input     27 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 1     
 	   3 Input     12 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 6     
-	  27 Input      5 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
+	  27 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 23    
 	  16 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 11    
-	  27 Input      4 Bit        Muxes := 2     
+	  27 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
-	  27 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 1     
 	  16 Input      2 Bit        Muxes := 1     
+	  27 Input      2 Bit        Muxes := 6     
 	   2 Input      2 Bit        Muxes := 8     
-	  27 Input      1 Bit        Muxes := 15    
-	   4 Input      1 Bit        Muxes := 9     
-	   5 Input      1 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 52    
+	   4 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 58    
+	  27 Input      1 Bit        Muxes := 18    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -349,25 +357,33 @@ Detailed RTL Component Info :
 	   3 Input     32 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 1     
 +---Muxes : 
-	  27 Input     32 Bit        Muxes := 3     
 	   3 Input     32 Bit        Muxes := 3     
-	   2 Input     32 Bit        Muxes := 1     
+	  27 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input     16 Bit        Muxes := 1     
 	   3 Input     12 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
-	  27 Input      4 Bit        Muxes := 2     
-	  27 Input      2 Bit        Muxes := 5     
-	  27 Input      1 Bit        Muxes := 14    
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 12    
+	  27 Input      4 Bit        Muxes := 3     
+	  27 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 2     
+	  27 Input      1 Bit        Muxes := 17    
 Module Control_FSM 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
 +---Registers : 
-	                5 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
 +---Muxes : 
 	  38 Input     27 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
 	  27 Input      5 Bit        Muxes := 1     
 	  27 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module Decoder 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -395,13 +411,12 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
-	   2 Input      1 Bit         XORs := 2     
 	   3 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
 +---Muxes : 
 	  16 Input     32 Bit        Muxes := 2     
 	  16 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
 Module ARM_multiplier 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -422,7 +437,7 @@ BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.551 ; gain = 354.539
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 487.844 ; gain = 357.371
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -481,9 +496,9 @@ WARNING: [Synth 8-3331] design tb has unconnected port BTN[2]
 WARNING: [Synth 8-3331] design tb has unconnected port BTN[1]
 WARNING: [Synth 8-3331] design tb has unconnected port BTN[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 487.559 ; gain = 354.547
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 488.000 ; gain = 357.527
 ---------------------------------------------------------------------------------
-Finished Parallel Reinfer  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 487.559 ; gain = 354.547
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 488.000 ; gain = 357.527
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -504,7 +519,7 @@ Finished RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_insti_5/\cpu_inst/myFSM/FSM_onehot_in_st_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu_inst/myFSMi_0/\myFSM/FSM_onehot_in_st_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (\mem_if/count_rx_reg[8] ) is unused and will be removed from module tb.
 WARNING: [Synth 8-3332] Sequential element (\mem_if/count_rx_reg[9] ) is unused and will be removed from module tb.
 WARNING: [Synth 8-3332] Sequential element (\mem_if/count_rx_reg[10] ) is unused and will be removed from module tb.
@@ -549,47 +564,68 @@ WARNING: [Synth 8-3332] Sequential element (\mem_if/addr_rx_reg[28] ) is unused 
 WARNING: [Synth 8-3332] Sequential element (\mem_if/addr_rx_reg[29] ) is unused and will be removed from module tb.
 WARNING: [Synth 8-3332] Sequential element (\mem_if/addr_rx_reg[30] ) is unused and will be removed from module tb.
 WARNING: [Synth 8-3332] Sequential element (\mem_if/addr_rx_reg[31] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/Actor/WEA_MEM_reg[2] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/Actor/WEA_MEM_reg[1] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/Actor/WEA_MEM_reg[0] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myFSM/FSM_onehot_in_st_reg[0] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[31] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[30] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[29] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[28] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[27] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[26] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[25] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[24] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[23] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[22] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[21] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[20] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[19] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[18] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[17] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[16] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[15] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[14] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[13] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[12] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[11] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[10] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[9] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[8] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[7] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[6] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[5] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[4] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[3] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[2] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[1] ) is unused and will be removed from module tb.
-WARNING: [Synth 8-3332] Sequential element (\cpu_inst/myShift/Shifter_out_reg[0] ) is unused and will be removed from module tb.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[31] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[30] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[29] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[28] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[27] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[26] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[25] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[24] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[23] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[22] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[21] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[20] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[19] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[18] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[17] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[16] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[15] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[14] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[13] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[12] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[11] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[10] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[9] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[8] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[7] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[6] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[5] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[4] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[3] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\Actor/DR_reg[2] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myFSM/FSM_onehot_in_st_reg[0] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[31] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[30] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[29] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[28] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[27] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[26] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[25] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[24] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[23] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[22] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[21] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[20] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[19] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[18] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[17] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[16] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[15] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[14] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[13] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[12] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[11] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[10] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[9] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[8] ) is unused and will be removed from module ARM_CPU.
+WARNING: [Synth 8-3332] Sequential element (\myShift/Shifter_out_reg[7] ) is unused and will be removed from module ARM_CPU.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 496.352 ; gain = 363.340
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 507.195 ; gain = 376.723
 ---------------------------------------------------------------------------------
-Finished Parallel Area Opt  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 496.352 ; gain = 363.340
-Finished Parallel Section  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 496.352 ; gain = 363.340
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 507.195 ; gain = 376.723
+Finished Parallel Section  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 507.195 ; gain = 376.723
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -597,16 +633,16 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 599.926 ; gain = 466.914
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 601.098 ; gain = 470.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 600.867 ; gain = 467.855
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 603.098 ; gain = 472.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 653.047 ; gain = 520.035
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 660.016 ; gain = 529.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -624,7 +660,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 653.047 ; gain = 520.035
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 660.016 ; gain = 529.543
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -637,13 +673,13 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 653.047 ; gain = 520.035
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 660.016 ; gain = 529.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 653.047 ; gain = 520.035
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 660.016 ; gain = 529.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
@@ -670,60 +706,59 @@ Report Cell Usage:
 |2     |BUFG          |    12|
 |3     |CARRY4        |    62|
 |4     |DSP48E1       |     3|
-|5     |LUT1          |    88|
-|6     |LUT2          |   162|
-|7     |LUT3          |    79|
-|8     |LUT4          |   223|
-|9     |LUT5          |   320|
-|10    |LUT6          |   950|
-|11    |MUXF7         |   174|
+|5     |LUT1          |    90|
+|6     |LUT2          |   165|
+|7     |LUT3          |   116|
+|8     |LUT4          |   261|
+|9     |LUT5          |   353|
+|10    |LUT6          |   954|
+|11    |MUXF7         |   197|
 |12    |MUXF8         |    78|
 |13    |FDCE          |   103|
 |14    |FDPE          |     5|
-|15    |FDRE          |    32|
+|15    |FDRE          |    36|
 |16    |FDSE          |     1|
-|17    |LD            |    94|
-|18    |LDC           |   945|
+|17    |LD            |     9|
+|18    |LDC           |  1034|
 |19    |IBUF          |     5|
 |20    |OBUF          |    17|
 |21    |OBUFT         |    26|
 +------+--------------+------+
 
 Report Instance Areas: 
-+------+--------------+---------------+------+
-|      |Instance      |Module         |Cells |
-+------+--------------+---------------+------+
-|1     |top           |               |  3419|
-|2     |  cpu_inst    |ARM_CPU        |  3053|
-|3     |    Actor     |Actions        |  2281|
-|4     |      RF      |ARM_rf         |   969|
-|5     |    myALU     |ARM_alu        |    47|
-|6     |    myDec     |Decoder        |   382|
-|7     |    myFSM     |Control_FSM    |   323|
-|8     |    myMUL     |ARM_multiplier |    20|
-|9     |  mem_if      |memory_uart    |   303|
-|10    |    uart_inst |uart           |    90|
-+------+--------------+---------------+------+
++------+--------------+------------+------+
+|      |Instance      |Module      |Cells |
++------+--------------+------------+------+
+|1     |top           |            |  3567|
+|2     |  cpu_inst    |ARM_CPU     |  3139|
+|3     |    Actor     |Actions     |  2346|
+|4     |      RF      |ARM_rf      |   969|
+|5     |    myALU     |ARM_alu     |    47|
+|6     |    myDec     |Decoder     |   383|
+|7     |    myFSM     |Control_FSM |   363|
+|8     |  mem_if      |memory_uart |   345|
+|9     |    uart_inst |uart        |    90|
++------+--------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 653.047 ; gain = 520.035
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 660.016 ; gain = 529.543
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 177 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 653.047 ; gain = 520.035
-INFO: [Netlist 29-17] Analyzing 1109 Unisim elements for replacement
+Synthesis finished with 0 errors, 0 critical warnings and 205 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 660.016 ; gain = 529.543
+INFO: [Netlist 29-17] Analyzing 1113 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1039 instances were transformed.
-  LD => LDCE: 94 instances
-  LDC => LDCE: 945 instances
+  A total of 1043 instances were transformed.
+  LD => LDCE: 9 instances
+  LDC => LDCE: 1034 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-48 Infos, 239 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 263 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 653.047 ; gain = 466.438
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 660.016 ; gain = 476.152
 # write_checkpoint tb.dcp
 # report_utilization -file tb_utilization_synth.rpt -pb tb_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 653.047 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 09 00:33:16 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 660.016 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 23:50:24 2017...

@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date         : Sun Apr 09 00:34:20 2017
+| Date         : Tue Apr 11 23:51:16 2017
 | Host         : admin-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -warn_on_violation -file tb_timing_summary_routed.rpt -pb tb_timing_summary_routed.pb
 | Design       : tb
@@ -55,7 +55,7 @@ Table of Contents
 
  There are 8 register/latch pins with no clock driven by root clock pin: SW[1] (HIGH)
 
- There are 94 register/latch pins with no clock driven by root clock pin: SW[2] (HIGH)
+ There are 531 register/latch pins with no clock driven by root clock pin: SW[2] (HIGH)
 
  There are 512 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/inp2_sig_reg[0]/G (HIGH)
 
@@ -65,45 +65,131 @@ Table of Contents
 
  There are 512 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/inp2_sig_reg[3]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[10]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[0]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[11]/G (HIGH)
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[10]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[23]/G (HIGH)
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[11]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[24]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[12]/G (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[25]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[13]/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[26]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[14]/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[27]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[15]/G (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[4]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[16]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[5]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[17]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[6]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[18]/G (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[7]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[19]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[8]/G (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[1]/G (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[9]/G (HIGH)
+ There are 40 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[20]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[21]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[22]/G (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[23]/G (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[24]/G (HIGH)
+
+ There are 39 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[25]/G (HIGH)
+
+ There are 41 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[26]/G (HIGH)
+
+ There are 41 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[27]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[28]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[29]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[2]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[30]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[31]/G (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[3]/G (HIGH)
+
+ There are 39 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[4]/G (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[5]/G (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[6]/G (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[7]/G (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[8]/G (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/instr_reg[9]/G (HIGH)
 
  There are 512 register/latch pins with no clock driven by root clock pin: cpu_inst/Actor/is_write_sig_reg/G (HIGH)
 
- There are 485 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/control_state_out_reg[0]/C (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: cpu_inst/myDec/DT_subclass_reg/G (HIGH)
 
- There are 517 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/control_state_out_reg[1]/C (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: cpu_inst/myDec/operation_reg[1]/G (HIGH)
 
- There are 517 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/control_state_out_reg[2]/C (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: cpu_inst/myDec/operation_reg[2]/G (HIGH)
 
- There are 485 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/control_state_out_reg[3]/C (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: cpu_inst/myDec/operation_reg[3]/G (HIGH)
 
- There are 146 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/control_state_out_reg[4]/C (HIGH)
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[10]/C (HIGH)
 
- There are 371 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/control_state_out_reg[4]_rep/C (HIGH)
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[11]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[12]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[13]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[14]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[15]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[16]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[17]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[18]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[19]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[1]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[20]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[21]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[22]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[23]/C (HIGH)
+
+ There are 488 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[24]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[25]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[26]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[2]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[3]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[4]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[5]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[6]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[7]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[8]/C (HIGH)
+
+ There are 522 register/latch pins with no clock driven by root clock pin: cpu_inst/myFSM/FSM_onehot_in_st_reg[9]/C (HIGH)
 
  There are 59 register/latch pins with no clock driven by root clock pin: mem_if/rx_clk_reg/C (HIGH)
 
@@ -122,7 +208,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 2305 pins that are not constrained for maximum delay. (HIGH)
+ There are 2398 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -186,7 +272,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      4.510        0.000                      0                   94        0.097        0.000                      0                   94        4.500        0.000                       0                    70  
+      4.766        0.000                      0                  108        0.112        0.000                      0                  108        4.500        0.000                       0                    74  
 
 
 All user specified timing constraints are met.
@@ -209,7 +295,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         4.510        0.000                      0                   94        0.097        0.000                      0                   94        4.500        0.000                       0                    70  
+sys_clk_pin         4.766        0.000                      0                  108        0.112        0.000                      0                  108        4.500        0.000                       0                    74  
 
 
 ------------------------------------------------------------------------------------------------
@@ -240,28 +326,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        4.510ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.097ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        4.766ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.112ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             4.510ns  (required time - arrival time)
-  Source:                 cpu_inst/myFSM/FSM_onehot_in_st_reg[24]/C
+Slack (MET) :             4.766ns  (required time - arrival time)
+  Source:                 cpu_inst/myFSM/FSM_onehot_in_st_reg[18]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            cpu_inst/myFSM/FSM_onehot_in_st_reg[21]/D
+  Destination:            cpu_inst/myFSM/FSM_onehot_in_st_reg[8]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.158ns  (logic 1.118ns (21.675%)  route 4.040ns (78.325%))
-  Logic Levels:           3  (LUT2=1 LUT6=2)
-  Clock Path Skew:        -0.326ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    3.579ns = ( 13.579 - 10.000 ) 
-    Source Clock Delay      (SCD):    4.168ns
-    Clock Pessimism Removal (CPR):    0.263ns
+  Data Path Delay:        4.977ns  (logic 1.482ns (29.777%)  route 3.495ns (70.223%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.253ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.262ns = ( 13.262 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.637ns
+    Clock Pessimism Removal (CPR):    0.122ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -275,18 +361,20 @@ Slack (MET) :             4.510ns  (required time - arrival time)
     W5                                                0.000     0.000 r  CLK
                          net (fo=0)                   0.000     0.000    CLK
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  IBUF/O
-                         net (fo=70, routed)          2.710     4.168    cpu_inst/myFSM/CLK
-    SLICE_X8Y47                                                       r  cpu_inst/myFSM/FSM_onehot_in_st_reg[24]/C
+                         net (fo=74, routed)          2.179     3.637    cpu_inst/myFSM/CLK
+    SLICE_X34Y16                                                      r  cpu_inst/myFSM/FSM_onehot_in_st_reg[18]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X8Y47          FDRE (Prop_fdre_C_Q)         0.518     4.686 f  cpu_inst/myFSM/FSM_onehot_in_st_reg[24]/Q
-                         net (fo=14, routed)          1.320     6.006    cpu_inst/myFSM/n_22_FSM_onehot_in_st_reg[24]
-    SLICE_X13Y47         LUT2 (Prop_lut2_I0_O)        0.150     6.156 f  cpu_inst/myFSM/FSM_onehot_in_st[21]_i_5/O
-                         net (fo=4, routed)           1.570     7.726    cpu_inst/myFSM/n_22_FSM_onehot_in_st[21]_i_5
-    SLICE_X9Y48          LUT6 (Prop_lut6_I1_O)        0.326     8.052 r  cpu_inst/myFSM/FSM_onehot_in_st[21]_i_4/O
-                         net (fo=1, routed)           1.151     9.202    cpu_inst/myFSM/n_22_FSM_onehot_in_st[21]_i_4
-    SLICE_X9Y45          LUT6 (Prop_lut6_I4_O)        0.124     9.326 r  cpu_inst/myFSM/FSM_onehot_in_st[21]_i_1/O
-                         net (fo=1, routed)           0.000     9.326    cpu_inst/myFSM/n_22_FSM_onehot_in_st[21]_i_1
-    SLICE_X9Y45          FDRE                                         r  cpu_inst/myFSM/FSM_onehot_in_st_reg[21]/D
+    SLICE_X34Y16         FDRE (Prop_fdre_C_Q)         0.518     4.155 f  cpu_inst/myFSM/FSM_onehot_in_st_reg[18]/Q
+                         net (fo=12, routed)          1.783     5.938    cpu_inst/myFSM/n_22_FSM_onehot_in_st_reg[18]
+    SLICE_X37Y17         LUT4 (Prop_lut4_I3_O)        0.152     6.090 f  cpu_inst/myFSM/FSM_onehot_in_st[21]_i_6/O
+                         net (fo=3, routed)           0.281     6.371    cpu_inst/myFSM/n_22_FSM_onehot_in_st[21]_i_6
+    SLICE_X37Y17         LUT5 (Prop_lut5_I0_O)        0.332     6.703 f  cpu_inst/myFSM/FSM_onehot_in_st[11]_i_3/O
+                         net (fo=4, routed)           0.882     7.585    cpu_inst/myFSM/n_22_FSM_onehot_in_st[11]_i_3
+    SLICE_X35Y17         LUT4 (Prop_lut4_I0_O)        0.153     7.738 r  cpu_inst/myFSM/FSM_onehot_in_st[8]_i_3/O
+                         net (fo=1, routed)           0.549     8.287    cpu_inst/myFSM/n_22_FSM_onehot_in_st[8]_i_3
+    SLICE_X35Y18         LUT6 (Prop_lut6_I1_O)        0.327     8.614 r  cpu_inst/myFSM/FSM_onehot_in_st[8]_i_1/O
+                         net (fo=1, routed)           0.000     8.614    cpu_inst/myFSM/n_22_FSM_onehot_in_st[8]_i_1
+    SLICE_X35Y18         FDRE                                         r  cpu_inst/myFSM/FSM_onehot_in_st_reg[8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -294,16 +382,16 @@ Slack (MET) :             4.510ns  (required time - arrival time)
     W5                                                0.000    10.000 r  CLK
                          net (fo=0)                   0.000    10.000    CLK
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  IBUF/O
-                         net (fo=70, routed)          2.191    13.579    cpu_inst/myFSM/CLK
-    SLICE_X9Y45                                                       r  cpu_inst/myFSM/FSM_onehot_in_st_reg[21]/C
-                         clock pessimism              0.263    13.842    
-                         clock uncertainty           -0.035    13.807    
-    SLICE_X9Y45          FDRE (Setup_fdre_C_D)        0.029    13.836    cpu_inst/myFSM/FSM_onehot_in_st_reg[21]
+                         net (fo=74, routed)          1.874    13.262    cpu_inst/myFSM/CLK
+    SLICE_X35Y18                                                      r  cpu_inst/myFSM/FSM_onehot_in_st_reg[8]/C
+                         clock pessimism              0.122    13.384    
+                         clock uncertainty           -0.035    13.349    
+    SLICE_X35Y18         FDRE (Setup_fdre_C_D)        0.031    13.380    cpu_inst/myFSM/FSM_onehot_in_st_reg[8]
   -------------------------------------------------------------------
-                         required time                         13.836    
-                         arrival time                          -9.326    
+                         required time                         13.380    
+                         arrival time                          -8.614    
   -------------------------------------------------------------------
-                         slack                                  4.510    
+                         slack                                  4.766    
 
 
 
@@ -311,19 +399,19 @@ Slack (MET) :             4.510ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.097ns  (arrival time - required time)
-  Source:                 mem_if/count_txclk_reg[5]/C
+Slack (MET) :             0.112ns  (arrival time - required time)
+  Source:                 mem_if/count_rxclk_reg[10]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            mem_if/count_txclk_reg[10]/D
+  Destination:            mem_if/rx_clk_reg/D
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.401ns  (logic 0.252ns (62.804%)  route 0.149ns (37.196%))
-  Logic Levels:           2  (CARRY4=1 LUT5=1)
-  Clock Path Skew:        0.199ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.435ns
-    Source Clock Delay      (SCD):    1.017ns
+  Data Path Delay:        0.422ns  (logic 0.186ns (44.087%)  route 0.236ns (55.913%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.190ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.724ns
+    Source Clock Delay      (SCD):    1.316ns
     Clock Pessimism Removal (CPR):    0.219ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -333,17 +421,14 @@ Slack (MET) :             0.097ns  (arrival time - required time)
     W5                                                0.000     0.000 r  CLK
                          net (fo=0)                   0.000     0.000    CLK
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  IBUF/O
-                         net (fo=70, routed)          0.790     1.017    mem_if/CLK
-    SLICE_X45Y39                                                      r  mem_if/count_txclk_reg[5]/C
+                         net (fo=74, routed)          1.089     1.316    mem_if/CLK
+    SLICE_X13Y18                                                      r  mem_if/count_rxclk_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X45Y39         FDCE (Prop_fdce_C_Q)         0.141     1.158 r  mem_if/count_txclk_reg[5]/Q
-                         net (fo=8, routed)           0.149     1.307    mem_if/count_txclk_reg[5]
-    SLICE_X45Y40         LUT5 (Prop_lut5_I0_O)        0.045     1.352 r  mem_if/count_txclk[8]_i_3/O
-                         net (fo=1, routed)           0.000     1.352    mem_if/n_22_count_txclk[8]_i_3
-    SLICE_X45Y40         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.066     1.418 r  mem_if/count_txclk_reg[8]_i_1/O[2]
-                         net (fo=1, routed)           0.000     1.418    mem_if/n_27_count_txclk_reg[8]_i_1
-    SLICE_X45Y40         FDCE                                         r  mem_if/count_txclk_reg[10]/D
+    SLICE_X13Y18         FDCE (Prop_fdce_C_Q)         0.141     1.457 r  mem_if/count_rxclk_reg[10]/Q
+                         net (fo=7, routed)           0.236     1.692    mem_if/count_rxclk_reg[10]
+    SLICE_X12Y17         LUT5 (Prop_lut5_I0_O)        0.045     1.737 r  mem_if/rx_clk_i_1/O
+                         net (fo=1, routed)           0.000     1.737    mem_if/n_22_rx_clk_i_1
+    SLICE_X12Y17         FDCE                                         r  mem_if/rx_clk_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -351,15 +436,15 @@ Slack (MET) :             0.097ns  (arrival time - required time)
     W5                                                0.000     0.000 r  CLK
                          net (fo=0)                   0.000     0.000    CLK
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  IBUF/O
-                         net (fo=70, routed)          1.021     1.435    mem_if/CLK
-    SLICE_X45Y40                                                      r  mem_if/count_txclk_reg[10]/C
-                         clock pessimism             -0.219     1.216    
-    SLICE_X45Y40         FDCE (Hold_fdce_C_D)         0.105     1.321    mem_if/count_txclk_reg[10]
+                         net (fo=74, routed)          1.310     1.724    mem_if/CLK
+    SLICE_X12Y17                                                      r  mem_if/rx_clk_reg/C
+                         clock pessimism             -0.219     1.505    
+    SLICE_X12Y17         FDCE (Hold_fdce_C_D)         0.120     1.625    mem_if/rx_clk_reg
   -------------------------------------------------------------------
-                         required time                         -1.321    
-                         arrival time                           1.418    
+                         required time                         -1.625    
+                         arrival time                           1.737    
   -------------------------------------------------------------------
-                         slack                                  0.097    
+                         slack                                  0.112    
 
 
 
@@ -373,9 +458,9 @@ Period:             10.000
 Sources:            { CLK }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required  Actual  Slack  Location      Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576     10.000  7.424  RAMB36_X0Y6   mem_if/bram_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
-Low Pulse Width   Slow    FDRE/C              n/a            0.500     5.000   4.500  SLICE_X8Y48   cpu_inst/myFSM/FSM_onehot_in_st_reg[22]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500     5.000   4.500  SLICE_X13Y46  cpu_inst/myFSM/FSM_onehot_in_st_reg[11]/C
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576     10.000  7.424  RAMB36_X0Y4   mem_if/bram_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKARDCLK
+Low Pulse Width   Slow    FDRE/C              n/a            0.500     5.000   4.500  SLICE_X37Y16  cpu_inst/myFSM/FSM_onehot_in_st_reg[14]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500     5.000   4.500  SLICE_X37Y18  cpu_inst/myFSM/FSM_onehot_in_st_reg[10]/C
 
 
 

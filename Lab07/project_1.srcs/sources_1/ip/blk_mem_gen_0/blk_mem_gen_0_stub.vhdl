@@ -1,10 +1,10 @@
 -- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
--- Date        : Sun Apr 09 19:34:32 2017
+-- Date        : Wed Apr 12 19:48:39 2017
 -- Host        : DESKTOP-316VVEL running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
+--               C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
 -- Design      : blk_mem_gen_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

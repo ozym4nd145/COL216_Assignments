@@ -1,0 +1,97 @@
+Vivado Simulator 2014.2
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.2/bin/unwrapped/win64.o/xelab.exe --debug typical --relax --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 --prj C:/Users/admin/Desktop/Suyash/project_1.sim/sim_1/synth/timing/tb.prj xil_defaultlib.tb xil_defaultlib.glbl 
+Multi-threading is on. Using 2 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/admin/Desktop/Suyash/project_1.sim/sim_1/synth/timing/tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ARM_CPU
+INFO: [VRFC 10-311] analyzing module ARM_alu
+INFO: [VRFC 10-311] analyzing module ARM_rf
+INFO: [VRFC 10-311] analyzing module Actions
+INFO: [VRFC 10-311] analyzing module Control_FSM
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_mux__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_2__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_2_synth
+INFO: [VRFC 10-311] analyzing module memory_uart
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-311] analyzing module glbl
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_time_synth.sdf", for root module "tb".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_time_synth.sdf", for root module "tb".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.PULLUP
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.OBUFT
+Compiling module simprims_ver.latchsre_ldce
+Compiling module simprims_ver.LDCE
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut3_mux4
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.ARM_rf
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.Actions
+Compiling module xil_defaultlib.ARM_alu
+Compiling module xil_defaultlib.Decoder
+Compiling module simprims_ver.sffsrce_fdre
+Compiling module simprims_ver.FDRE
+Compiling module simprims_ver.sffsrce_fdse
+Compiling module simprims_ver.FDSE
+Compiling module xil_defaultlib.Control_FSM
+Compiling module xil_defaultlib.ARM_CPU
+Compiling module simprims_ver.ffsrce_fdce
+Compiling module simprims_ver.FDCE
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_mux
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_mux__p...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(DOA_REG=1,DOB...
+Compiling module simprims_ver.RAMB36E1(DOA_REG=1,DOB_REG=1,INI...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(DOA_REG=1,DOB...
+Compiling module simprims_ver.RAMB36E1(DOA_REG=1,DOB_REG=1,REA...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_w...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_generi...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_top
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_v8_2_s...
+Compiling module xil_defaultlib.blk_mem_gen_0_blk_mem_gen_v8_2__...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module simprims_ver.ffsrce_fdpe
+Compiling module simprims_ver.FDPE
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.memory_uart
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ADREG=0,ALUMO...
+Compiling module simprims_ver.BUFG
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Waiting for 11 sub-compilation(s) to finish...
+Built simulation snapshot tb_time_synth

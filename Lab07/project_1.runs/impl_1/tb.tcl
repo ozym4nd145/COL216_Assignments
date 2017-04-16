@@ -52,14 +52,14 @@ set rc [catch {
   set_param gui.test TreeTableDev
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir C:/Users/admin/Desktop/Suyash/not_implementing/project_1.cache/wt [current_project]
-  set_property parent.project_dir C:/Users/admin/Desktop/Suyash/not_implementing [current_project]
-  add_files -quiet C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/tb.dcp
-  add_files -quiet C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp
-  set_property netlist_only true [get_files C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp]
-  read_xdc -mode out_of_context -ref blk_mem_gen_0 c:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc
-  set_property processing_order EARLY [get_files c:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
-  read_xdc C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc
+  set_property webtalk.parent_dir C:/Users/admin/Desktop/Suyash/project_1.cache/wt [current_project]
+  set_property parent.project_dir C:/Users/admin/Desktop/Suyash [current_project]
+  add_files -quiet C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/tb.dcp
+  add_files -quiet C:/Users/admin/Desktop/Suyash/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp
+  set_property netlist_only true [get_files C:/Users/admin/Desktop/Suyash/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp]
+  read_xdc -mode out_of_context -ref blk_mem_gen_0 c:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc
+  set_property processing_order EARLY [get_files c:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+  read_xdc C:/Users/admin/Desktop/Suyash/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc
   link_design -top tb -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -74,7 +74,7 @@ start_step opt_design
 set rc [catch {
   create_msg_db opt_design.pb
   catch {write_debug_probes -quiet -force debug_nets}
-  catch {update_ip_catalog -quiet -current_ip_cache {c:/Users/admin/Desktop/Suyash/not_implementing/project_1.cache} }
+  catch {update_ip_catalog -quiet -current_ip_cache {c:/Users/admin/Desktop/Suyash/project_1.cache} }
   opt_design 
   write_checkpoint -force tb_opt.dcp
   close_msg_db -file opt_design.pb
@@ -126,8 +126,8 @@ start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   write_bitstream -force tb.bit 
-  if { [file exists C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/tb.hwdef] } {
-    catch { write_sysdef -hwdef C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/tb.hwdef -bitfile tb.bit -meminfo tb_bd.bmm -file tb.sysdef }
+  if { [file exists C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/tb.hwdef] } {
+    catch { write_sysdef -hwdef C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/tb.hwdef -bitfile tb.bit -meminfo tb_bd.bmm -file tb.sysdef }
   }
   close_msg_db -file write_bitstream.pb
 } RESULT]

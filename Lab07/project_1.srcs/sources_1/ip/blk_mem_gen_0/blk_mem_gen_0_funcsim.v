@@ -1,10 +1,10 @@
 // Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-// Date        : Sun Apr 09 19:34:32 2017
+// Date        : Wed Apr 12 19:48:39 2017
 // Host        : DESKTOP-316VVEL running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/Users/Madhur/Desktop/with_ldr_str/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.v
+//               C:/Users/Madhur/Documents/Lab07/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.v
 // Design      : blk_mem_gen_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1016,9 +1016,9 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hE3510000E2411001E2822001E2833004E5832000E3A03C02E3A02001E3A01FFA),
-    .INIT_01(256'hE2411001E2833004E0844002E5932000E3A03C02E3A04000E3A01FFA1AFFFFF9),
-    .INIT_02(256'h0000000000000000000000000000000000000000E08450041AFFFFF9E3510000),
+    .INIT_00(256'h00000000000000000000000000000000E5D4701FE5C4301FE3A040B1E3A03016),
+    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),

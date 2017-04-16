@@ -2,9 +2,9 @@
 # Vivado v2014.2 (64-bit)
 # SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
 # IP Build 924643 on Fri May 30 09:20:16 MDT 2014
-# Start of session at: Sun Apr 09 00:32:34 2017
-# Process ID: 4176
-# Log file: C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1/tb.vds
-# Journal file: C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/synth_1\vivado.jou
+# Start of session at: Tue Apr 11 23:49:45 2017
+# Process ID: 2548
+# Log file: C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1/tb.vds
+# Journal file: C:/Users/admin/Desktop/Suyash/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source tb.tcl

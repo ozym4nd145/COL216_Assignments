@@ -32,4 +32,4 @@ ExecStep()
    fi
 }
 
-ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L blk_mem_gen_v8_2 -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav --prj C:/Users/Madhur/Desktop/with_ldr_str/project_1.sim/sim_1/behav/tb.prj   xil_defaultlib.tb   xil_defaultlib.glbl
+ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L blk_mem_gen_v8_2 -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav --prj C:/Users/Madhur/Documents/Lab07/project_1.sim/sim_1/behav/tb.prj   xil_defaultlib.tb   xil_defaultlib.glbl

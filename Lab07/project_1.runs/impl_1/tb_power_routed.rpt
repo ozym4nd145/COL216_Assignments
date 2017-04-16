@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date             : Sun Apr 09 00:34:21 2017
+| Date             : Tue Apr 11 23:51:17 2017
 | Host             : admin-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file tb_power_routed.rpt -pb tb_power_summary_routed.pb
 | Design           : tb
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.108 |
-| Dynamic (W)              | 0.036 |
+| Total On-Chip Power (W)  | 0.102 |
+| Dynamic (W)              | 0.030 |
 | Device Static (W)        | 0.072 |
 | Total Off-Chip Power (W) | 0.000 |
 | Effective TJA (C/W)      | 5.0   |
@@ -50,20 +50,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        1 |       --- |             --- |
-| Slice Logic    |     0.012 |     3333 |       --- |             --- |
-|   LUT as Logic |     0.012 |     1625 |     20800 |            7.81 |
+| Clocks         |     0.001 |        1 |       --- |             --- |
+| Slice Logic    |     0.009 |     3478 |       --- |             --- |
+|   LUT as Logic |     0.009 |     1711 |     20800 |            8.22 |
 |   CARRY4       |    <0.001 |       62 |      8150 |            0.76 |
-|   F7/F8 Muxes  |    <0.001 |      252 |     32600 |            0.77 |
-|   Register     |    <0.001 |     1188 |     41600 |            2.85 |
+|   F7/F8 Muxes  |    <0.001 |      275 |     32600 |            0.84 |
+|   Register     |    <0.001 |     1196 |     41600 |            2.87 |
 |   BUFG         |    <0.001 |       12 |        32 |           37.50 |
-|   Others       |     0.000 |       27 |       --- |             --- |
-| Signals        |     0.017 |     2962 |       --- |             --- |
+|   Others       |     0.000 |       25 |       --- |             --- |
+| Signals        |     0.015 |     3049 |       --- |             --- |
 | Block RAM      |     0.002 |        4 |        50 |            8.00 |
 | DSPs           |     0.003 |        3 |        90 |            3.33 |
 | I/O            |    <0.001 |       68 |       106 |           64.15 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.108 |          |           |                 |
+| Total          |     0.102 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.046 |       0.036 |      0.010 |
+| Vccint    |       1.000 |     0.040 |       0.030 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -142,24 +142,23 @@ Table of Contents
 +-----------------------------------------+-----------+
 | Name                                    | Power (W) |
 +-----------------------------------------+-----------+
-| tb                                      |     0.036 |
-|   cpu_inst                              |     0.029 |
-|     Actor                               |     0.021 |
-|       RF                                |     0.005 |
+| tb                                      |     0.030 |
+|   cpu_inst                              |     0.023 |
+|     Actor                               |     0.019 |
+|       RF                                |     0.006 |
 |     myALU                               |    <0.001 |
-|     myDec                               |     0.004 |
-|     myFSM                               |     0.003 |
-|     myMUL                               |    <0.001 |
-|   mem_if                                |     0.005 |
-|     bram_0                              |     0.003 |
-|       U0                                |     0.003 |
-|         inst_blk_mem_gen                |     0.003 |
-|           gnativebmg.native_blk_mem_gen |     0.003 |
-|             valid.cstr                  |     0.003 |
+|     myDec                               |     0.002 |
+|     myFSM                               |     0.002 |
+|   mem_if                                |     0.004 |
+|     bram_0                              |     0.002 |
+|       U0                                |     0.002 |
+|         inst_blk_mem_gen                |     0.002 |
+|           gnativebmg.native_blk_mem_gen |     0.002 |
+|             valid.cstr                  |     0.002 |
 |               has_mux_a.A               |    <0.001 |
 |               has_mux_b.B               |    <0.001 |
-|               ramloop[0].ram.r          |     0.001 |
-|                 prim_init.ram           |     0.001 |
+|               ramloop[0].ram.r          |     0.002 |
+|                 prim_init.ram           |     0.002 |
 |               ramloop[1].ram.r          |    <0.001 |
 |                 prim_init.ram           |    <0.001 |
 |               ramloop[2].ram.r          |    <0.001 |

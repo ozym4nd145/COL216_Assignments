@@ -139,6 +139,14 @@ if (rst = '1') then
     Flags <= (others => '0');
     flags_sig <= (others => '0');
     is_write_sig <= '0';
+    Shifter_in <= (others => '0');
+    Shift_amount <= (others => '0');
+    Shift_type <= (others => '0');
+    Shifter_in <= (others => '0');
+    WEA_MEM <= (others => '0');
+    ADDR_MEM <= (others => '0');
+    DIN_MEM <= (others => '0');
+    
 else
     
     case control_state is

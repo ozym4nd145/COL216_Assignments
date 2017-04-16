@@ -11,31 +11,31 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_property target_language Verilog [current_project]
 set_param project.compositeFile.enableAutoGeneration 0
 set_property default_lib xil_defaultlib [current_project]
-add_files C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/ip/blk_mem_gen_0/data.coe
-add_files -quiet C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp
-set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/not_implementing/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp]
+add_files C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/ip/blk_mem_gen_0/data.coe
+add_files -quiet C:/Users/admin/Desktop/Suyash/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp
+set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp]
 read_vhdl -library xil_defaultlib {
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_rf.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/MyTypes.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/new/ARM_multiplier.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/memory.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd
-  C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/sources_1/imports/tb_src/tb.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_rf.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/MyTypes.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/new/ARM_multiplier.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/uart_vhdl.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Shifter.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Decoder.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Control_FSM.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ALU_entity.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/Actions.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/memory.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/cpu_src/ARM_CPU.vhd
+  C:/Users/admin/Desktop/Suyash/project_1.srcs/sources_1/imports/tb_src/tb.vhd
 }
-read_xdc C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/not_implementing/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
+read_xdc C:/Users/admin/Desktop/Suyash/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/admin/Desktop/Suyash/project_1.srcs/constrs_1/imports/tb_release_cpu/Basys3_Master.xdc]
 
 read_xdc dont_buffer.xdc
 set_property used_in_implementation false [get_files dont_buffer.xdc]
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/admin/Desktop/Suyash/not_implementing/project_1.cache/wt [current_project]
-set_property parent.project_dir C:/Users/admin/Desktop/Suyash/not_implementing [current_project]
+set_property webtalk.parent_dir C:/Users/admin/Desktop/Suyash/project_1.cache/wt [current_project]
+set_property parent.project_dir C:/Users/admin/Desktop/Suyash [current_project]
 catch { write_hwdef -file tb.hwdef }
 synth_design -top tb -part xc7a35tcpg236-1
 write_checkpoint tb.dcp

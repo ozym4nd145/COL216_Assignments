@@ -2,9 +2,9 @@
 # Vivado v2014.2 (64-bit)
 # SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
 # IP Build 924643 on Fri May 30 09:20:16 MDT 2014
-# Start of session at: Sun Apr 09 19:32:18 2017
-# Process ID: 6288
-# Log file: C:/Users/Madhur/Desktop/with_ldr_str/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
-# Journal file: C:/Users/Madhur/Desktop/with_ldr_str/project_1.runs/blk_mem_gen_0_synth_1\vivado.jou
+# Start of session at: Wed Apr 12 19:41:34 2017
+# Process ID: 4616
+# Log file: C:/Users/Madhur/Documents/Lab07/project_1.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: C:/Users/Madhur/Documents/Lab07/project_1.runs/blk_mem_gen_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl

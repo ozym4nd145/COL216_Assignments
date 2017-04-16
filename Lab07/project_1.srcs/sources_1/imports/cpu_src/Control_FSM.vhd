@@ -21,7 +21,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.MyTypes.all;
 
-
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+--use ieee.numeric_std.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -38,22 +39,28 @@ entity Control_FSM is
 			  instr : in std_logic_vector(31 downto 0);
 --			  instr_20 : in std_logic;
 			  rst : in std_logic;
-              control_state_out : out  control_state_type;
+                    control_state_out : out  control_state_type;
 			  clock : in std_logic);
 end Control_FSM;
 
 architecture Behavioral of Control_FSM is
 signal  in_st : control_state_type;
+signal tmrCntr : std_logic_vector(9 downto 0) := (others => '0');
+-- constant TMR_CNTR_MAX : std_logic_vector(9 downto 0) := "0010000000"; --100Mhz/128 
+constant TMR_CNTR_MAX : std_logic_vector(9 downto 0) := "0000000000"; --100Mhz/128 
+--constant TMR_CNTR_MAX : std_logic_vector(9 downto 0) := "1111111111"; --100Mhz/1023 
 begin
 
 control_state_out <= in_st when rst = '0' else
                      s0;
 process(clock)
 begin
-if(clock='1' and clock'event) then 
-    if rst='1' then
-        in_st <= s0;
-    else
+if(clock='1' and clock'event) then
+      if(rst = '1') then
+            in_st <= s0;
+            tmrCntr <= (others=>'0');
+      elsif (tmrCntr = TMR_CNTR_MAX) then
+        tmrCntr <= (others => '0' );
         case in_st is
           when s0 =>   
                 in_st <= s23;
@@ -150,6 +157,8 @@ if(clock='1' and clock'event) then
           when s22 => 
                in_st <= s0;                  
           end case;
+      else
+            tmrCntr <= tmrCntr + 1;
       end if;
   end if;
 end process;
