@@ -35,8 +35,12 @@ use IEEE.std_logic_unsigned.all;
 entity memory_uart is
 --  Port ( );
 PORT(
-    CLK : in std_logic;
-    RST : in std_logic;
+--    CLK : in std_logic;
+--    RST : in std_logic;
+
+    HRESETn : IN STD_LOGIC;
+    HCLK : IN STD_LOGIC;
+
     UART_TX: out std_logic;
     UART_RX: in std_logic;
     LAST_DATA_RX : out std_logic_vector(7 downto 0);
@@ -45,65 +49,48 @@ PORT(
     UART_RX_CNT : out std_logic_vector(15 downto 0);
     CLK_MEM : IN STD_LOGIC;
     ENA_MEM : IN STD_LOGIC;
-    WEA_MEM : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    ADDR_MEM : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    DIN_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    DOUT_MEM : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+--    WEA_MEM : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+--    ADDR_MEM : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+--    DIN_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+--    DOUT_MEM : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    
+    HSELx : IN STD_LOGIC;
+    HADDR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    HWRITE: IN_STD_LOGIC;
+    HSIZE:  IN_STD_LOGIC_VECTOR(2 DOWNTO 0);
+    HBURST:  IN_STD_LOGIC_VECTOR(2 DOWNTO 0);
+--    HPROT:  IN_STD_LOGIC_VECTOR(3 DOWNTO 0);
+    HTRANS:  IN_STD_LOGIC_VECTOR(1 DOWNTO 0);
+--    HMASTLOCK:  IN_STD_LOGIC;
+    HREADY:  IN_STD_LOGIC;
+    
+    HWDATA:  IN_STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+    HREADYOUT: OUT STD_LOGIC;
+    HRESP: OUT STD_LOGIC;
+
+    HRDATA: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+
     );
 end memory_uart;
 
 architecture Behavioral of memory_uart is
 
---component UART_TX_CTRL
---    Port ( SEND : in  STD_LOGIC;
---           DATA : in  STD_LOGIC_VECTOR (7 downto 0);
---           CLK : in  STD_LOGIC;
---           READY : out  STD_LOGIC;
---           UART_TX : out  STD_LOGIC);
---end component;
-
---component uart_simple
---	Port ( 
---		I_clk : in  STD_LOGIC;
---		I_clk_baud_count : in STD_LOGIC_VECTOR (15 downto 0);
-
---		I_reset: in  STD_LOGIC;
-
---		I_txData : in  STD_LOGIC_VECTOR (7 downto 0);
---		I_txSig : in  STD_LOGIC;
---		O_txRdy : out  STD_LOGIC;
---		O_tx : out  STD_LOGIC;
-
---		I_rx : in STD_LOGIC;
---		I_rxCont: in STD_LOGIC;
---		O_rxData : out STD_LOGIC_VECTOR (7 downto 0);
---		O_rxSig : out STD_LOGIC;
---		O_rxFrameError : out STD_LOGIC;
-
---		-- Internal debug ports for inspecting issues
---		-- These can be removed 
---		D_rxClk : out STD_LOGIC;
---		D_rxState: out integer;
---		D_txClk : out STD_LOGIC;
---		D_txState: out integer
---	);
---end component;
-
 component uart port(
     reset: IN STD_LOGIC;
-txclk    : IN STD_LOGIC;
-ld_tx_data     : IN STD_LOGIC;
-tx_data        : IN STD_LOGIC_VECTOR(7 downto 0);
-tx_enable      : IN STD_LOGIC;
-tx_out         : OUT STD_LOGIC;
-tx_empty       : OUT STD_LOGIC;
-rxclk          : IN STD_LOGIC;
-uld_rx_data    : IN STD_LOGIC;
-rx_data        : OUT STD_LOGIC_VECTOR(7 downto 0);
-rx_enable      : IN STD_LOGIC;
-rx_in          : IN STD_LOGIC;
-rx_empty: OUT STD_LOGIC
-);
+    txclk    : IN STD_LOGIC;
+    ld_tx_data     : IN STD_LOGIC;
+    tx_data        : IN STD_LOGIC_VECTOR(7 downto 0);
+    tx_enable      : IN STD_LOGIC;
+    tx_out         : OUT STD_LOGIC;
+    tx_empty       : OUT STD_LOGIC;
+    rxclk          : IN STD_LOGIC;
+    uld_rx_data    : IN STD_LOGIC;
+    rx_data        : OUT STD_LOGIC_VECTOR(7 downto 0);
+    rx_enable      : IN STD_LOGIC;
+    rx_in          : IN STD_LOGIC;
+    rx_empty: OUT STD_LOGIC
+    );
 end component;
 
 COMPONENT blk_mem_gen_0
@@ -122,29 +109,6 @@ COMPONENT blk_mem_gen_0
     doutb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END COMPONENT;
-
---component uart_rx
---    Port (            serial_in : in std_logic;
---                       data_out : out std_logic_vector(7 downto 0);
---                    read_buffer : in std_logic;
---                   reset_buffer : in std_logic;
---                   en_16_x_baud : in std_logic;
---            buffer_data_present : out std_logic;
---                    buffer_full : out std_logic;
---               buffer_half_full : out std_logic;
---                            clk : in std_logic);
---    end component;
-    
---component uart_tx
---    Port (            data_in : in std_logic_vector(7 downto 0);
---                 write_buffer : in std_logic;
---                 reset_buffer : in std_logic;
---                 en_16_x_baud : in std_logic;
---                   serial_out : out std_logic;
---                  buffer_full : out std_logic;
---             buffer_half_full : out std_logic;
---                          clk : in std_logic);
---    end component;
 
 component rng_xoroshiro128plus 
     generic (
@@ -172,6 +136,12 @@ component rng_xoroshiro128plus
         out_data:   out std_logic_vector(63 downto 0) );
 end component;
 
+signal CLK : std_logic;
+signal RST : std_logic;
+signal WEA_MEM : STD_LOGIC_VECTOR(3 DOWNTO 0);
+signal ADDR_MEM : STD_LOGIC_VECTOR(11 DOWNTO 0);
+signal DIN_MEM : STD_LOGIC_VECTOR(31 DOWNTO 0);
+signal DOUT_MEM : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 signal prng_data: std_logic_vector(63 downto 0);
 signal addr_rx: std_logic_vector(31 downto 0) := X"00000000";
@@ -222,23 +192,6 @@ with mem_write_mode select
 with mem_write_mode select
     mem_dinb <=  data_rx when '1', (others=>'0') when others;       
 
-                      
-
---bram_0: blk_mem_gen_0 port map(
---    clka => tx_clk,
---    ena => '1',
---    wea => (others=>'0'),
---    addra => addr_tx(11 downto 0),
---    dina => (others=>'0'),
---    douta => dout_mem,
---    clkb => rx_clk,
---    enb => rx_empty_not_delayed,
---    web => (others=>'1'),
---    addrb => addr_rx(13 downto 0),
---    dinb => data_rx,
---    doutb => open
---);
-
 bram_0: blk_mem_gen_0 port map(
     clka => CLK_MEM,
     ena => ENA_MEM,
@@ -282,29 +235,6 @@ elsif (tx_clk'event and tx_clk = '1') then
     end if;
 end if;    
 end process;
-
---uart_rx_0: uart_rx port map (
---          serial_in => serial_data,
---          data_out => data_rx,
---          read_buffer => '1',
---           reset_buffer => '0',
---           en_16_x_baud => '1',
---           buffer_data_present => open,
---           buffer_full => open,
---           buffer_half_full => open,
---           clk => CLK
---);
-    
---uart_tx_0: uart_tx port map (
---        data_in => data_tx,
---         write_buffer => '1',
---         reset_buffer => RST,
---         en_16_x_baud => '1',
---          serial_out => serial_data,
---          buffer_full => open,
---        buffer_half_full => open,
---          clk => CLK
---);
 
 pdiv_rxclk: process(CLK, RST) begin
 if (RST = '1') then
@@ -369,64 +299,6 @@ uart_inst: uart port map (
     rx_empty    => rx_empty
 );
 
---uart_inst: uart port map (
---    reset => RST,
---    txclk => tx_clk         ,
---    ld_tx_data  => '0'   ,
---    tx_data     =>  data_tx  ,
---    tx_enable   => '0'  ,
---    tx_out      => open   ,
---    tx_empty    => open,  
---    rxclk       => rx_clk   ,
---    uld_rx_data => (rx_empty_not)   ,
---    rx_data     => data_rx   ,
---    rx_enable   => ENABLE_RX   ,
---    rx_in       => UART_RX   ,
---    rx_empty    => rx_empty
---);
-
---uart_tx_inst: uart_simple Port map( 
---		I_clk => CLK,
---		I_clk_baud_count => "0010100010110000",
---		I_reset => RST,
---		I_txData => data_tx,
---		I_txSig => ENABLE_TX, 
---		O_txRdy => tx_empty,
---		O_tx => UART_TX,
---		I_rx => '0',
---		I_rxCont => '0',
---		O_rxData => open,
---		O_rxSig => open,
---		O_rxFrameError => open
-
---		-- Internal debug ports for inspecting issues
---		-- These can be removed 
---	);
-
---uart_tx_inst: UART_TX_CTRL port map(
---    SEND => ENABLE_TX,
---    DATA => data_tx,
---   CLK  => CLK,
---   READY => tx_empty,
---   UART_TX => UART_TX
---);
-
 rx_empty_not <= not rx_empty;
-
---PRNG for generating random operands
---PRNG: rng_xoroshiro128plus 
---    generic map(
---        -- Default seed value.
---        init_seed =>  x"0123456789abcdef3141592653589793" )
---    port map (
---        clk => CLK,
---        rst => '0',         --active high reset
---        reseed => '0',
---        newseed =>  (others => '1'),
---        out_ready => tx_empty,
---        out_valid => open,
---        out_data => prng_data
---    );        
-      
 
 end Behavioral;
