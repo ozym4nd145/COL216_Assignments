@@ -32,7 +32,7 @@ use IEEE.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity slave_memory is
+entity slave_mem is
 --  Port ( );
 PORT(
     HRESETn : IN STD_LOGIC;
@@ -88,18 +88,18 @@ component memory_uart PORT(
     );
 end component;
 
-signal sig_wea_mem : std_logic vector(3 downto 0) := (others=>'0');
-signal temp_wea_mem : std_logic vector(3 downto 0) := (others=>'0');
+signal sig_wea_mem : std_logic_vector(3 downto 0) := (others=>'0');
+signal temp_wea_mem : std_logic_vector(3 downto 0) := (others=>'0');
 signal is_write : std_logic := '0';
-signal sig_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
-signal temp_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
-signal temp1_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
-signal temp2_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
-signal temp3_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
-signal sig_din_mem : std_logic vector(31 downto 0) := (others=>'0');
-signal temp_din_mem : std_logic vector(31 downto 0) := (others=>'0');
-signal sig_dout_mem : std_logic vector(31 downto 0) := (others=>'0');
-signal temp_dout_mem : std_logic vector(31 downto 0) := (others=>'0');
+signal sig_addr_mem : std_logic_vector(11 downto 0) := (others=>'0');
+signal temp_addr_mem : std_logic_vector(11 downto 0) := (others=>'0');
+signal temp1_addr_mem : std_logic_vector(11 downto 0) := (others=>'0');
+signal temp2_addr_mem : std_logic_vector(11 downto 0) := (others=>'0');
+signal temp3_addr_mem : std_logic_vector(11 downto 0) := (others=>'0');
+signal sig_din_mem : std_logic_vector(31 downto 0) := (others=>'0');
+signal temp_din_mem : std_logic_vector(31 downto 0) := (others=>'0');
+signal sig_dout_mem : std_logic_vector(31 downto 0) := (others=>'0');
+signal temp_dout_mem : std_logic_vector(31 downto 0) := (others=>'0');
 
 TYPE STATE_TYPE IS (s0, s1, s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21);
 SIGNAL state   : STATE_TYPE := s0;
@@ -126,7 +126,8 @@ HRESP <= '0';
 HRDATA <= temp_dout_mem;
 
 process(HCLK)
-    if HCLK='1' and HLK'event then
+begin
+    if (HCLK='1' and HCLK'event) then
         if HRESETn='1' then
             state <= s0;
             sig_wea_mem <= "0000";
@@ -145,7 +146,7 @@ process(HCLK)
 
                     if(HTRANS = "00") then
                         HREADYOUT <= '1';
-                    elsif (HTRANS="10" and HBURST="000")
+                    elsif (HTRANS="10" and HBURST="000") then
                         sig_addr_mem <= HADDR(15 downto 4);
                         temp_wea_mem <= HADDR(3 downto 0);
                         HREADYOUT <= '0';
@@ -154,7 +155,7 @@ process(HCLK)
                         else
                             state <= s2;
                         end if;
-                    elsif (HBURST="010")
+                    elsif (HBURST="010") then
                         sig_addr_mem <= HADDR(15 downto 4);
                         temp_wea_mem <= HADDR(3 downto 0);
                         HREADYOUT <= '0';
@@ -162,6 +163,7 @@ process(HCLK)
                             state <= s14;
                         else
                             state <= s3;
+                        end if;
                     end if;
                 when s1 =>
                 -- single read start
