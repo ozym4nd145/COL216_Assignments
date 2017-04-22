@@ -157,17 +157,17 @@ if(clock='1' and clock'event) then
           when s22 => 
                in_st <= w1;     
    	 when r1 =>
-   		st <= r2;
+   		in_st <= r2;
    	 when r2 =>
-   		st <= r3;
+   		in_st <= r3;
     	when r3 =>
-   		st <= s22;
+   		in_st <= s22;
    when w1 =>
-   		st <= w2;
+   		in_st <= w2;
    when w2 =>
-   		st <= w3;
+   		in_st <= w3;
    when w3 =>
-   		st <= s0;
+   		in_st <= s0;
           end case;
       else
             tmrCntr <= tmrCntr + 1;

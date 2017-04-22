@@ -87,7 +87,7 @@ signal out1_sig :std_logic_vector (31 downto 0):= (others => '0'  );
 signal out2_sig :std_logic_vector (31 downto 0):= (others => '0'  ); 
 signal instr: std_logic_vector (31 downto 0):= (others => '0'  );
 signal flags_sig: nibble := (others => '0');
-
+signal dummy : std_logic;
 signal A: std_logic_vector(31 downto 0) := (others => '0'  );
 signal B: std_logic_vector(31 downto 0):= (others => '0'  );
 signal C: std_logic_vector(31 downto 0):= (others => '0'  );
@@ -401,7 +401,9 @@ else
                         data_sig(7 downto 0) <= DOUT_MEM(31 downto 24);                    
                     end if;
                 end if;
-            end if;             
+            end if;   
+      when others =>
+                dummy <= '0';
     end case;
 end if;
 end Process;

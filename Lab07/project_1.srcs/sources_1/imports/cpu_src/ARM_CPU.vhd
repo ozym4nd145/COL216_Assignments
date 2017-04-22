@@ -37,7 +37,7 @@ ENTITY ARM_CPU IS
 		WEA_MEM :  OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     ADDR_MEM : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     DIN_MEM :  OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    DOUT_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    DOUT_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
 	
 	);
 END ARM_CPU;
@@ -168,7 +168,7 @@ BEGIN
 	
 	
 	Actor :  Actions port map (
-        clock  => HCLK,
+        clock  => CLK_CPU,
 		control_state => cont_state,
 		instruction => instruction,
 		operation => operation,
@@ -182,7 +182,7 @@ BEGIN
 		result_mul => res_mul,
 		nextFlags => nxt_flags, 
 		Flags => flags, 
-		rst => HRESETn, 
+		rst => RST, 
 		predicate => predicate, 
 		Shifter_in => Shifter_in, 
 		Shifter_out => Shifter_out, 
@@ -203,9 +203,9 @@ BEGIN
 		DP_subclass =>  DP_subclass, 
 		opt  =>  operation, 
 		instr  => instruction , 
-		rst  =>  HRESETn, 
+		rst  =>  RST, 
 		control_state_out  => cont_state , 
-		clock  =>  HCLK 
+		clock  =>  CLK_CPU 
 	);
 
 	myDec : Decoder
