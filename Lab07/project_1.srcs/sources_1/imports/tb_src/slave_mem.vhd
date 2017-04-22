@@ -88,24 +88,115 @@ component memory_uart PORT(
     );
 end component;
 
+signal sig_wea_mem : std_logic vector(3 downto 0) := (others=>'0');
+signal temp_wea_mem : std_logic vector(3 downto 0) := (others=>'0');
+signal is_write : std_logic := '0';
+signal sig_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
+signal sig_din_mem : std_logic vector(31 downto 0) := (others=>'0');
+signal sig_dout_mem : std_logic vector(31 downto 0) := (others=>'0');
+signal temp_dout_mem : std_logic vector(31 downto 0) := (others=>'0');
+
+TYPE STATE_TYPE IS (s0, s1, s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12);
+SIGNAL state   : STATE_TYPE := s0;
 begin
 
 mem_slave: memory_uart port map (
-    CLK  => ,
-    RST  => ,
-    UART_TX => ,
-    UART_RX => ,
-    LAST_DATA_RX  => ,
-    ENABLE_TX => ,
-    ENABLE_RX => ,
-    UART_RX_CNT  => ,
-    CLK_MEM  => ,
-    ENA_MEM  => ,
-    WEA_MEM  => ,
-    ADDR_MEM  => ,
-    DIN_MEM  => ,
-    DOUT_MEM  => 
+    CLK  => HCLK,
+    RST  => HRESETn,
+    UART_TX => UART_TX,
+    UART_RX => UART_RX,
+    LAST_DATA_RX  => LAST_DATA_RX,
+    ENABLE_TX => ENABLE_TX,
+    ENABLE_RX => ENABLE_RX,
+    UART_RX_CNT  => UART_RX_CNT,
+    CLK_MEM  => CLK_MEM,
+    ENA_MEM  => ENA_MEM,
+    WEA_MEM  => sig_wea_mem,
+    ADDR_MEM  => sig_addr_mem,
+    DIN_MEM  => sig_din_mem,
+    DOUT_MEM  => sig_dout_mem
 );
+
+HRESP <= '0';
+HRDATA <= sig_dout_mem;
+
+process(HCLK)
+    if HCLK='1' and HLK'event then
+        if HRESETn='1' then
+            state <= s0;
+            sig_wea_mem <= "0000";
+            HREADYOUT <= '1';
+            is_write <= '0';
+        else
+            case state is
+                when s0 =>
+                    if(HWRITE = '1') then
+                        is_write <= '1';
+                    else
+                        is_write <= '0';
+                    end if;
+
+                    sig_wea_mem <= "0000";
+
+                    if(HTRANS = "00") then
+                        HREADYOUT <= '1';
+                    elsif (HTRANS="10" and HBURST="000")
+                        sig_addr_mem <= HADDR(15 downto 4);
+                        temp_wea_mem <= HADDR(3 downto 0);
+                        HREADYOUT <= '0';
+                        if(HWRITE = '1') then
+                            state <= s1;
+                        else
+                            state <= s2;
+                        end if;
+                    elsif (HBURST="010")
+                        sig_addr_mem <= HADDR(15 downto 4);
+                        temp_wea_mem <= HADDR(3 downto 0);
+                        HREADYOUT <= '0';
+                        state <= s3;
+                    end if;
+                when s1 =>
+                -- single read start
+                    sig_wea_mem <= "0000";
+                    HREADYOUT <= '0';
+                    state <= s4;
+                when s2 =>
+                -- single write start
+                    sig_wea_mem <= temp_wea_mem;
+                    sig_din_mem <= HWDATA;
+                    HREADYOUT <= '0';
+                    state <= s6;
+                when s3 =>
+                -- BURST mode start
+                    
+                when s4 =>
+                -- middle stage of read single
+                    temp_dout_mem <= sig_dout_mem;
+                    HWDATA <= sig_dout_mem;
+                    sig_wea_mem <= "0000";
+                    HREADYOUT <= '0';
+                    state <= s5;
+                when s5 =>
+                -- last stage of read single
+                    sig_wea_mem <= "0000";
+                    HRDATA <= temp_dout_mem;
+                    HREADYOUT <= '1';
+                    state <= s0;
+                when s6 =>
+                -- middle stage of write single
+                    HREADYOUT <= '0';
+                    state <= s7;
+                when s7 =>
+                -- final stage of write single
+                    HREADYOUT <= '1';
+                    state <= s0;
+                when s8 =>
+                when s9 =>
+                when s10 =>
+            end case;
+        end if;
+    end if;
+end process;
 
 end Behavioral;
 

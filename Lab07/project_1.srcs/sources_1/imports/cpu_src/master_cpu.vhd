@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 28.02.2017 15:34:17
 -- Design Name: 
--- Module Name: slave_mem - Behavioral
+-- Module Name: master_cpu - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -47,7 +47,7 @@ PORT(
     CLK_MEM : IN STD_LOGIC;
     ENA_MEM : IN STD_LOGIC;
     
-	HREADY : IN std_logic;
+		HREADY : IN std_logic;
     HRESP : IN std_logic;
     HCLK : IN std_logic;
     HRESETn : IN std_logic;
@@ -57,7 +57,9 @@ PORT(
     HWRITE : OUT std_logic;
     HSIZE : OUT std_logic_vector (2 downto 0);
     HBURST : OUT std_logic_vector (2 downto 0);
+--		HPROT:   OUT std_logic_vector (3 downto 0);
     HTRANS : OUT std_logic_vector (1 downto 0);
+--		HMASTLOCK: OUT std_logic;
     HWDATA : OUT std_logic_vector (31 downto 0)
 
     );
