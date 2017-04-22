@@ -27,11 +27,62 @@ end tb;
 
 architecture Behavioral of tb is
 
-component memory_uart
---  Port ( );
-PORT(
-    CLK : in std_logic;
-    RST : in std_logic;
+-- component memory_uart
+-- --  Port ( );
+-- PORT(
+--     CLK : in std_logic;
+--     RST : in std_logic;
+--     UART_TX: out std_logic;
+--     UART_RX: in std_logic;
+--     LAST_DATA_RX : out std_logic_vector(7 downto 0);
+--     ENABLE_TX: in std_logic;
+--     ENABLE_RX: in std_logic;
+--     UART_RX_CNT : out std_logic_vector(15 downto 0);
+--     CLK_MEM : IN STD_LOGIC;
+--     ENA_MEM : IN STD_LOGIC;
+--     WEA_MEM : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+--     ADDR_MEM : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+--     DIN_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+--     DOUT_MEM : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+--     );
+-- end component;
+
+-- component ARM_CPU
+-- 	PORT (
+--     CLK_CPU : in STD_LOGIC;
+--     RST : in std_logic;
+--     WEA_MEM : out STD_LOGIC_VECTOR(3 DOWNTO 0);
+--     ADDR_MEM : out STD_LOGIC_VECTOR(11 DOWNTO 0);
+--     DIN_MEM : out STD_LOGIC_VECTOR(31 DOWNTO 0);
+--     DOUT_MEM : in STD_LOGIC_VECTOR(31 DOWNTO 0)
+-- 	 );
+-- end component;
+
+component master_cpu IS
+	PORT 
+	(
+		HRESETn       : IN STD_LOGIC;
+		HCLK          : IN STD_LOGIC;
+
+		HREADY        : IN std_logic;
+		HRESP         : IN std_logic;
+		HRESETn       : IN std_logic;
+		HRDATA        : IN std_logic_vector (31 DOWNTO 0);
+ 
+		HADDR         : OUT std_logic_vector (15 DOWNTO 0);
+		HWRITE        : OUT std_logic;
+		HSIZE         : OUT std_logic_vector (2 DOWNTO 0);
+		HBURST        : OUT std_logic_vector (2 DOWNTO 0);
+		HTRANS        : OUT std_logic_vector (1 DOWNTO 0);
+		HWDATA        : OUT std_logic_vector (31 DOWNTO 0)
+	);
+END component;
+
+component slave_memory is
+    PORT(
+    HRESETn : IN STD_LOGIC;
+    HCLK : IN STD_LOGIC;
+
     UART_TX: out std_logic;
     UART_RX: in std_logic;
     LAST_DATA_RX : out std_logic_vector(7 downto 0);
@@ -40,23 +91,21 @@ PORT(
     UART_RX_CNT : out std_logic_vector(15 downto 0);
     CLK_MEM : IN STD_LOGIC;
     ENA_MEM : IN STD_LOGIC;
-    WEA_MEM : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    ADDR_MEM : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    DIN_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    DOUT_MEM : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    
+    HSELx : IN STD_LOGIC;
+    HADDR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    HWRITE: IN STD_LOGIC;
+    HSIZE:  IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    HBURST:  IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    HTRANS:  IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    HREADY:  IN STD_LOGIC;
+    HWDATA:  IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    HREADYOUT: OUT STD_LOGIC;
+    HRESP: OUT STD_LOGIC;
+    HRDATA: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
 end component;
 
-component ARM_CPU
-	PORT (
-    CLK_CPU : in STD_LOGIC;
-    RST : in std_logic;
-    WEA_MEM : out STD_LOGIC_VECTOR(3 DOWNTO 0);
-    ADDR_MEM : out STD_LOGIC_VECTOR(11 DOWNTO 0);
-    DIN_MEM : out STD_LOGIC_VECTOR(31 DOWNTO 0);
-    DOUT_MEM : in STD_LOGIC_VECTOR(31 DOWNTO 0)
-	 );
-end component;
 
 
 signal temp: std_logic;
@@ -68,6 +117,16 @@ signal addr_mem : std_logic_vector(11 downto 0):= (others=>'0');
 signal din_mem : std_logic_vector(31 downto 0):= (others=>'0');
 signal dout_mem : std_logic_vector(31 downto 0);
 
+signal temp_HADDR : std_logic_vector(15 downto 0) := (others => '0');
+signal temp_HWRITE : std_logic := '0';
+signal temp_HSIZE : std_logic_vector(2 downto 0) := (others => '0');
+signal temp_HBURST : std_logic_vector(2 downto 0) := (others => '0');
+signal temp_HTRANS : std_logic_vector(1 downto 0) := (others => '0');
+signal temp_HWDATA : std_logic_vector(31 downto 0) := (others => '0');
+
+signal temp_HREADYOUT : std_logic := '0';
+signal temp_HRESP : std_logic := '0';
+signal temp_HRDATA : std_logic_vector(31 downto 0) := (others => '0');
 begin
 
 ----------------------------------------------------------------------------------------------------
@@ -91,31 +150,74 @@ ena_mem <= '1';
 --CAUTION: DO NOT TOUCH THE CODE PORTION BELOW. The appropriate signals have been already brought out and use them.
 --------------------------------------------------------------------------------------------------------
 
-mem_if: memory_uart port map(
-    CLK => CLK,
-    RST => BTN(4),
+master_inst: master_cpu port map	(
+		HRESETn       => SW(4),
+		HCLK          => CLK,
+
+		HREADY        => temp_HREADYOUT,
+		HRESP         => temp_HRESP,
+		HRDATA        => temp_HRDATA,
+ 
+		HADDR         => temp_HADDR,
+		HWRITE        => temp_HWRITE,
+		HSIZE         => temp_HSIZE,
+		HBURST        => temp_HBURST,
+		HTRANS        => temp_HTRANS,
+		HWDATA        => temp_HWDATA
+	);
+
+slave_if: slave_memory port map (
+    HRESETn : BTN(4),
+    HCLK : CLK,
+
     UART_TX => UART_TXD,
     UART_RX => UART_RXD,
-    LAST_DATA_RX => LED(7 downto 0),
+    LAST_DATA_RX  => LED(7 downto 0),
     ENABLE_TX => SW(0),
     ENABLE_RX => SW(1),
-    UART_RX_CNT => UART_RX_CNT,
-    CLK_MEM => clk_mem,
-    ENA_MEM => ena_mem,
-    WEA_MEM => wea_mem,
-    ADDR_MEM => addr_mem,
-    DIN_MEM => din_mem,
-    DOUT_MEM => dout_mem
-);
+    UART_RX_CNT  => UART_RX_CNT,
+    CLK_MEM  => clk_mem,
+    ENA_MEM  => ena_mem,
+    
+    HSELx => ena_mem,
+    HADDR => temp_HADDR,
+    HWRITE=> temp_HWRITE,
+    HSIZE=>  temp_HSIZE,
+    HBURST=>  temp_HBURST,
+    HTRANS=>  temp_HTRANS,
+    HREADY=>  temp_HREADYOUT,
+    HWDATA=>  temp_HWDATA;
 
-cpu_inst: ARM_CPU port map(
-    CLK_CPU => CLK,
-    RST => SW(2),
-    WEA_MEM => wea_mem,
-    ADDR_MEM => addr_mem,
-    DIN_MEM => din_mem,
-    DOUT_MEM => dout_mem
-	 );
+    HREADYOUT => temp_HREADYOUT,
+    HRESP => temp_HRESP,
+    HRDATA => temp_HRDATA
+    );
+
+-- mem_if: memory_uart port map(
+--     CLK => CLK,
+--     RST => BTN(4),
+--     UART_TX => UART_TXD,
+--     UART_RX => UART_RXD,
+--     LAST_DATA_RX => LED(7 downto 0),
+--     ENABLE_TX => SW(0),
+--     ENABLE_RX => SW(1),
+--     UART_RX_CNT => UART_RX_CNT,
+--     CLK_MEM => clk_mem,
+--     ENA_MEM => ena_mem,
+--     WEA_MEM => wea_mem,
+--     ADDR_MEM => addr_mem,
+--     DIN_MEM => din_mem,
+--     DOUT_MEM => dout_mem
+-- );
+
+-- cpu_inst: ARM_CPU port map(
+--     CLK_CPU => CLK,
+--     RST => SW(2),
+--     WEA_MEM => wea_mem,
+--     ADDR_MEM => addr_mem,
+--     DIN_MEM => din_mem,
+--     DOUT_MEM => dout_mem
+-- 	 );
 
 
 LED(15 downto 8) <= UART_RX_CNT(7 downto 0);
