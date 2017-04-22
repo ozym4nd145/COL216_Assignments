@@ -43,7 +43,7 @@ begin
     nextFlags(1) <=  (is_set and valid_instruction and '1') or ((not is_set) and Flags(1)) when X"00000000",
                (is_set and valid_instruction and '0') or ((not is_set) and Flags(1)) when others ;
   -- carry_last_second <= temp_result(31) xor operand1(31) xor operand2(31);
-  carry_last <= ((operand1(31) and operand2(31))or(operand1(31) and carry_last_second)or(operand2(31) and carry_last_second));
+  -- carry_last <= ((operand1(31) and operand2(31))or(operand1(31) and carry_last_second)or(operand2(31) and carry_last_second));
   nextFlags(2) <= (is_set and valid_instruction and carry_last) or ((not is_set) and Flags(2));
   nextFlags(3) <= (is_set and valid_instruction and (carry_last xor carry_last_second)) or ((not is_set) and Flags(3));
 
