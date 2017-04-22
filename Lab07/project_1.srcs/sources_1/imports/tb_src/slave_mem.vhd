@@ -49,15 +49,15 @@ PORT(
     
     HSELx : IN STD_LOGIC;
     HADDR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    HWRITE: IN_STD_LOGIC;
-    HSIZE:  IN_STD_LOGIC_VECTOR(2 DOWNTO 0);
-    HBURST:  IN_STD_LOGIC_VECTOR(2 DOWNTO 0);
---    HPROT:  IN_STD_LOGIC_VECTOR(3 DOWNTO 0);
-    HTRANS:  IN_STD_LOGIC_VECTOR(1 DOWNTO 0);
---    HMASTLOCK:  IN_STD_LOGIC;
-    HREADY:  IN_STD_LOGIC;
+    HWRITE: IN STD_LOGIC;
+    HSIZE:  IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    HBURST:  IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+--    HPROT:  IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    HTRANS:  IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+--    HMASTLOCK:  IN STD_LOGIC;
+    HREADY:  IN STD_LOGIC;
     
-    HWDATA:  IN_STD_LOGIC_VECTOR(31 DOWNTO 0);
+    HWDATA:  IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 
     HREADYOUT: OUT STD_LOGIC;
     HRESP: OUT STD_LOGIC;
@@ -92,11 +92,16 @@ signal sig_wea_mem : std_logic vector(3 downto 0) := (others=>'0');
 signal temp_wea_mem : std_logic vector(3 downto 0) := (others=>'0');
 signal is_write : std_logic := '0';
 signal sig_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
+signal temp_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
+signal temp1_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
+signal temp2_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
+signal temp3_addr_mem : std_logic vector(11 downto 0) := (others=>'0');
 signal sig_din_mem : std_logic vector(31 downto 0) := (others=>'0');
+signal temp_din_mem : std_logic vector(31 downto 0) := (others=>'0');
 signal sig_dout_mem : std_logic vector(31 downto 0) := (others=>'0');
 signal temp_dout_mem : std_logic vector(31 downto 0) := (others=>'0');
 
-TYPE STATE_TYPE IS (s0, s1, s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12);
+TYPE STATE_TYPE IS (s0, s1, s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21);
 SIGNAL state   : STATE_TYPE := s0;
 begin
 
@@ -118,7 +123,7 @@ mem_slave: memory_uart port map (
 );
 
 HRESP <= '0';
-HRDATA <= sig_dout_mem;
+HRDATA <= temp_dout_mem;
 
 process(HCLK)
     if HCLK='1' and HLK'event then
@@ -153,46 +158,105 @@ process(HCLK)
                         sig_addr_mem <= HADDR(15 downto 4);
                         temp_wea_mem <= HADDR(3 downto 0);
                         HREADYOUT <= '0';
-                        state <= s3;
+                        if(HWRITE = '1') then
+                            state <= s14;
+                        else
+                            state <= s3;
                     end if;
                 when s1 =>
                 -- single read start
                     sig_wea_mem <= "0000";
                     HREADYOUT <= '0';
                     state <= s4;
-                when s2 =>
-                -- single write start
-                    sig_wea_mem <= temp_wea_mem;
-                    sig_din_mem <= HWDATA;
-                    HREADYOUT <= '0';
-                    state <= s6;
-                when s3 =>
-                -- BURST mode start
-                    
+                
                 when s4 =>
                 -- middle stage of read single
-                    temp_dout_mem <= sig_dout_mem;
-                    HWDATA <= sig_dout_mem;
+                    HRDATA <= sig_dout_mem;
                     sig_wea_mem <= "0000";
                     HREADYOUT <= '0';
                     state <= s5;
                 when s5 =>
                 -- last stage of read single
                     sig_wea_mem <= "0000";
-                    HRDATA <= temp_dout_mem;
+                    temp_dout_mem <= sig_dout_mem;                    
                     HREADYOUT <= '1';
                     state <= s0;
+                
+                when s2 =>
+                -- single write , reading data
+                    sig_wea_mem <= temp_wea_mem;
+                    sig_din_mem <= HWDATA;
+                    HREADYOUT <= '0';
+                    state <= s6;
                 when s6 =>
-                -- middle stage of write single
+                -- write wait 1
                     HREADYOUT <= '0';
                     state <= s7;
                 when s7 =>
-                -- final stage of write single
+                -- write wait 2
+                    HREADYOUT <= '0';
+                    state <= s8;
+                when s8 =>
+                -- write wait 3
                     HREADYOUT <= '1';
                     state <= s0;
-                when s8 =>
+                
+                when s3 =>
+                -- BURST mode Read addr2
+                    temp1_addr_mem <= HADDR(15 downto 4);
+                    sig_addr_mem <= HADDR(15 downto 4);
+                    HREADYOUT <= '0';
+                    state <= s9;
                 when s9 =>
+                -- BURST mode Read addr3
+                    temp2_addr_mem <= HADDR(15 downto 4);
+                    sig_addr_mem <= HADDR(15 downto 4);                    
+                    HREADYOUT <= '0';
+                    sig_addr_mem <= temp_addr_mem;
+
                 when s10 =>
+                -- BURST mode Read addr4
+                    temp3_addr_mem <= HADDR(15 downto 4);
+                    sig_addr_mem <= HADDR(15 downto 4);                    
+                    HREADYOUT <= '0';
+                    temp_dout_mem <= sig_dout_mem;
+                when s11 =>
+                -- Burst mode Read wait 1
+                    sig_addr_mem <= temp_addr_mem;
+                    HREADYOUT <= '0';
+                    temp_dout_mem <= sig_dout_mem;                                        
+                when s12 =>
+                -- Burst mode Read wait 2
+                    HREADYOUT <= '0';
+                    temp_dout_mem <= sig_dout_mem;                       
+                when s13 =>
+                -- Burst mode Read wait 3
+                    sig_addr_mem <= temp2_addr_mem;
+                    HREADYOUT <= '1';
+                    temp_dout_mem <= sig_dout_mem;
+                when s14 =>
+                    state <= s0;
+                when s15 =>
+                    state <= s0;
+                
+                when s16 =>
+                    state <= s0;
+
+                when s17 =>
+                    state <= s0;
+
+                when s18 =>
+                    state <= s0;
+
+                when s19 =>
+                    state <= s0;
+
+                when s20 =>
+                    state <= s0;
+
+                when s21 =>
+                    state <= s0;
+
             end case;
         end if;
     end if;
