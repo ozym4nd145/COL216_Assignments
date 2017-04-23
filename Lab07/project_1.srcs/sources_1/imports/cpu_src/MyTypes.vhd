@@ -29,7 +29,7 @@ package MyTypes is
 	type DP_subclass_type is (IMM,SFT_IMM,SFT_REG);
 	subtype instr_class_type is  std_logic_vector (1 downto 0);
 	type DT_subclass_type is (WRD,HWRD);
-	type control_state_type is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,r1,r2,r3,w1,w2,w3);
+	type control_state_type is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,r1,r2,r3,w1,w2,w3,r4,r5,r6,r7);
 
 
 end MyTypes;

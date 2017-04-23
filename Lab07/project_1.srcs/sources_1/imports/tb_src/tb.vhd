@@ -62,23 +62,22 @@ component master_cpu IS
 	PORT 
 	(
 		HRESETn       : IN STD_LOGIC;
-		HCLK          : IN STD_LOGIC;
+    HCLK          : IN STD_LOGIC;
 
-		HREADY        : IN std_logic;
-		HRESP         : IN std_logic;
-		HRESETn       : IN std_logic;
-		HRDATA        : IN std_logic_vector (31 DOWNTO 0);
+    HREADY        : IN std_logic;
+    HRESP         : IN std_logic;
+    HRDATA        : IN std_logic_vector (31 DOWNTO 0);
  
-		HADDR         : OUT std_logic_vector (15 DOWNTO 0);
-		HWRITE        : OUT std_logic;
-		HSIZE         : OUT std_logic_vector (2 DOWNTO 0);
-		HBURST        : OUT std_logic_vector (2 DOWNTO 0);
-		HTRANS        : OUT std_logic_vector (1 DOWNTO 0);
-		HWDATA        : OUT std_logic_vector (31 DOWNTO 0)
+    HADDR         : OUT std_logic_vector (15 DOWNTO 0);
+    HWRITE        : OUT std_logic;
+    HSIZE         : OUT std_logic_vector (2 DOWNTO 0);
+    HBURST        : OUT std_logic_vector (2 DOWNTO 0);
+    HTRANS        : OUT std_logic_vector (1 DOWNTO 0);
+    HWDATA        : OUT std_logic_vector (31 DOWNTO 0)
 	);
 END component;
 
-component slave_memory is
+component slave_mem is
     PORT(
     HRESETn : IN STD_LOGIC;
     HCLK : IN STD_LOGIC;
@@ -153,11 +152,9 @@ ena_mem <= '1';
 master_inst: master_cpu port map	(
 		HRESETn       => SW(4),
 		HCLK          => CLK,
-
 		HREADY        => temp_HREADYOUT,
 		HRESP         => temp_HRESP,
 		HRDATA        => temp_HRDATA,
- 
 		HADDR         => temp_HADDR,
 		HWRITE        => temp_HWRITE,
 		HSIZE         => temp_HSIZE,
@@ -166,9 +163,9 @@ master_inst: master_cpu port map	(
 		HWDATA        => temp_HWDATA
 	);
 
-slave_if: slave_memory port map (
-    HRESETn : BTN(4),
-    HCLK : CLK,
+slave_if: slave_mem port map (
+    HRESETn => BTN(4),
+    HCLK => CLK,
 
     UART_TX => UART_TXD,
     UART_RX => UART_RXD,
@@ -186,7 +183,7 @@ slave_if: slave_memory port map (
     HBURST=>  temp_HBURST,
     HTRANS=>  temp_HTRANS,
     HREADY=>  temp_HREADYOUT,
-    HWDATA=>  temp_HWDATA;
+    HWDATA=>  temp_HWDATA,
 
     HREADYOUT => temp_HREADYOUT,
     HRESP => temp_HRESP,

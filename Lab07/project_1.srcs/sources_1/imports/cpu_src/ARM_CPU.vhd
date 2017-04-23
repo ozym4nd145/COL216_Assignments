@@ -35,9 +35,10 @@ ENTITY ARM_CPU IS
 		CLK_CPU : IN STD_LOGIC;
 		RST : IN std_logic;
 		WEA_MEM :  OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    ADDR_MEM : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-    DIN_MEM :  OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    DOUT_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+	    ADDR_MEM : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+	    DIN_MEM :  OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	    DOUT_MEM : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+	    REQUEST: OUT STD_LOGIC
 	
 	);
 END ARM_CPU;
@@ -129,7 +130,8 @@ ARCHITECTURE Behavioral OF ARM_CPU IS
 			DOUT_MEM : IN word;
 			not_implemented : IN std_logic;
 			DT_subclass: in DT_subclass_type;
-			undefined : IN std_logic
+			undefined : IN std_logic;
+			REQUEST: OUT std_logic
 		);
 	END COMPONENT;
 	  
@@ -164,8 +166,10 @@ ARCHITECTURE Behavioral OF ARM_CPU IS
         SIGNAL c_out : std_logic:= '0';
         SIGNAL N_mul: std_logic:= '0';
         SIGNAL Z_mul: std_logic := '0';
+        SIGNAL req: std_logic := '0';
 BEGIN
 	
+	REQUEST <= req;
 	
 	Actor :  Actions port map (
         clock  => CLK_CPU,
@@ -194,7 +198,8 @@ BEGIN
 		DOUT_MEM => DOUT_MEM,
 		DT_subclass=> DT_subclass,
 		not_implemented => not_imp, 
-		undefined => undef
+		undefined => undef,
+		REQUEST => req
 	);
 
 	myFSM : Control_FSM port map (

@@ -68,9 +68,9 @@ ARCHITECTURE Behavioral OF master_cpu IS
 	TYPE STATE_TYPE IS (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12);
 	SIGNAL state : STATE_TYPE := s0;
 
-	SIGNAL sig_din_mem : std_logic vector(31 DOWNTO 0) := (OTHERS => '0');
-	SIGNAL sig_wea_mem : std_logic vector(3 DOWNTO 0) := (OTHERS => '0');
-	SIGNAL sig_addr_mem : std_logic vector(11 DOWNTO 0) := (OTHERS => '0');
+	SIGNAL sig_din_mem : std_logic_vector(31 DOWNTO 0) := (OTHERS => '0');
+	SIGNAL sig_wea_mem : std_logic_vector(3 DOWNTO 0) := (OTHERS => '0');
+	SIGNAL sig_addr_mem : std_logic_vector(11 DOWNTO 0) := (OTHERS => '0');
 	SIGNAL req: std_logic := '0';
 BEGIN
 	master_cpu : ARM_CPU
@@ -85,13 +85,13 @@ BEGIN
 		REQUEST   => req
 	);
 
-	HWRITE <= '0' when WEA_MEM = "0000" else
+	HWRITE <= '0' when sig_wea_mem = "0000" else
 			  '1';
-	HTRANS <= "00" when req = '1' else
-			  "10";
+	HTRANS <= "10" when req = '1' else
+			  "00";
 	HADDR	<= sig_addr_mem & sig_wea_mem;
 	HWDATA	<= sig_din_mem;
-	HSIZE  <= "00";
+	HSIZE  <= "000";
 	HBURST <= "000";
 
 	--PROCESS (HCLK)

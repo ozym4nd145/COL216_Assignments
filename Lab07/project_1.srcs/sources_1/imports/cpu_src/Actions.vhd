@@ -42,8 +42,8 @@ entity Actions is
 		result_alu : in word;
 		op1_mul: out word;
 		op2_mul: out word;
-        N_mul: in std_logic;
-        Z_mul: in std_logic;
+    N_mul: in std_logic;
+    Z_mul: in std_logic;
 		result_mul: in word;
 		nextFlags : in nibble;
 		Flags : out nibble;
@@ -58,8 +58,9 @@ entity Actions is
 		DIN_MEM : out word;
 		DOUT_MEM : in word;
 		not_implemented : in std_logic;
-        DT_subclass: in DT_subclass_type;
-		undefined : in std_logic
+    DT_subclass: in DT_subclass_type;
+		undefined : in std_logic;
+    REQUEST: out std_logic
    );
 end Actions;
 
@@ -97,7 +98,7 @@ signal E: std_logic_vector(31 downto 0):= (others => '0'  );
 signal Res: std_logic_vector(31 downto 0):= (others => '0'  );
 signal DR: std_logic_vector(31 downto 0):= (others => '0'  );
 signal PC: std_logic_vector(31 downto 0):= (others => '0'  );
-
+signal req: std_logic := '0';
 begin
 	
 
@@ -112,6 +113,7 @@ RF: ARM_rf port map (
 );
 
 --instruction <= instr;
+REQUEST <= req;
 instruction <= instr when rst='0' else
                 (others => '0');
 process(control_state,PC,result_alu,result_mul,DOUT_MEM,not_implemented,undefined,Shifter_out,predicate,rst,out1_sig,out2_sig)
@@ -146,7 +148,7 @@ if (rst = '1') then
     WEA_MEM <= (others => '0');
     ADDR_MEM <= (others => '0');
     DIN_MEM <= (others => '0');
-    
+    req <= '0';
 else
     
     case control_state is
@@ -156,6 +158,7 @@ else
               PC <= out1_sig; 
               ADDR_MEM <= PC(13 downto 2);
               is_write_sig <= '0';
+              req <= '1';
          when s23 =>
               inp2_sig <= "1111";
               data_sig <= PC+4;
@@ -273,6 +276,7 @@ else
         
          when s20 =>   
             WEA_MEM <= "0000";
+            req <= '1';
             if (instr(24) = '0') then
                 ADDR_MEM <= A(13 downto 2);
                 DR <= A;
@@ -282,6 +286,7 @@ else
             end if;
          when s21 =>
             -- If Half Word Store
+            req <= '1';
             if (DT_subclass = HWRD) then
                 DIN_MEM <= C(15 downto 0)&C(15 downto 0);
                 -- Deciding source whether A or D
@@ -403,7 +408,8 @@ else
                 end if;
             end if;   
       when others =>
-                dummy <= '0';
+              req <= '0';
+              dummy <= '0';
     end case;
 end if;
 end Process;

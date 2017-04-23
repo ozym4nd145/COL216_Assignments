@@ -63,6 +63,12 @@ if(clock='1' and clock'event) then
         tmrCntr <= (others => '0' );
         case in_st is
           when s0 =>   
+                in_st <= r4;
+          when r4 =>
+                in_st <= r5;
+          when r5 =>
+                in_st <= r6;
+          when r6 =>
                 in_st <= s23;
           when s23 =>
                 in_st <= s1;     
@@ -155,19 +161,21 @@ if(clock='1' and clock'event) then
           when s25 =>
                 in_st <= s0;
           when s22 => 
-               in_st <= w1;     
-   	 when r1 =>
-   		in_st <= r2;
-   	 when r2 =>
-   		in_st <= r3;
-    	when r3 =>
-   		in_st <= s22;
-   when w1 =>
-   		in_st <= w2;
-   when w2 =>
-   		in_st <= w3;
-   when w3 =>
-   		in_st <= s0;
+               in_st <= s0;   
+         	when r1 =>
+         	    in_st <= r2;
+         	when r2 =>
+         	    in_st <= r3;
+        	when r3 =>
+              in_st <= r7;
+            when r7 =>
+              in_st <= s22;
+          when w1 =>
+           		in_st <= w2;
+          when w2 =>
+           		in_st <= w3;
+          when w3 =>
+              in_st <= s25;
           end case;
       else
             tmrCntr <= tmrCntr + 1;

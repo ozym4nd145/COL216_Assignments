@@ -130,7 +130,6 @@ begin
             sig_wea_mem <= "0000";
             temp_dout_mem <= (others => '0');
             HREADYOUT <= '1';
-            is_write <= '0';
         else
             case state is
                 when s0 =>
@@ -159,11 +158,11 @@ begin
                     state <= s4;
                 when s4 =>
                 -- middle stage of read single -- SHORT CIRCUITING
-                    temp_dout_mem <= sig_dout_mem;
-                    HREADYOUT <= '1';
-                    state <= s0;
+                    HREADYOUT <= '0';
+                    state <= s5;
                 when s5 =>
                 -- last stage of read single
+                    temp_dout_mem <= sig_dout_mem;
                     HREADYOUT <= '1';
                     state <= s0;
                 when s2 =>
